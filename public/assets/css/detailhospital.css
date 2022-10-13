@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap");
+:root {
+  --first-color: #1b262c;
+  --second-color: #0f4c75;
+  --third-color: #3282b8;
+  --fourth-color: #bbe1fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #f8f8f8;
+}
+/* !NAVBAR */
+
+.navbar-brand {
+  font-size: 26px;
+  line-height: 54px;
+  color: var(--second-color) !important;
+  padding-left: 20px;
+}
+.navbar-brand img {
+  width: 50px;
+  margin-bottom: 15px;
+}
+.navbar-brand span {
+  margin-left: 15px;
+}
+.navbar-brand b {
+  color: var(--second-color);
+  font-weight: bolder;
+}
+
+.active {
+  color: var(--second-color) !important;
+}
+.nav-color {
+  background: #eaeaea;
+  transition: all ease-in-out 0.5s;
+  box-shadow: 0px 4px 20px #38383889;
+}
+
+.bg-transparent {
+  transition: all ease-in 0.5s;
+}
+.nav-link {
+  font-size: 20px;
+  color: rgba(48, 91, 119, 0.63);
+  font-weight: 500;
+}
+.login {
+  color: var(--second-color) !important;
+}
+.nav-link:hover,
+.nav-link:focus,
+.login {
+  color: var(--fourth-color);
+  font-weight: 500;
+}
+.login img {
+  margin-left: 15px;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+.menu-toggle input {
+  position: absolute;
+  top: -5px;
+  width: 35px;
+  height: 40px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 4;
+}
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3.5px;
+  border-radius: 50px;
+  background-color: var(--second-color);
+  transition: all 0.3s;
+  z-index: 3;
+}
+/*HAMBURGER ANIMATION*/
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(3) {
+  width: 50%;
+  margin-left: 12px;
+}
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: var(--second-color);
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+  background-color: var(--second-color);
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+.menu-toggle input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+}
+/* !HEADER */
+.header-detail-hospitals {
+  margin-top: 184px;
+  margin-left: 100px;
+  padding-bottom: 73px;
+}
+.detail-header-hospitals {
+  margin-right: 5rem;
+}
+.title-header {
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  width: 500px;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 36px;
+  color: var(--second-color);
+  padding: 10px;
+  padding-top: 20px;
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+.title-header h5 {
+  font-weight: 600;
+}
+.header-img-2 {
+  margin-top: 85px;
+}
+.img-header-1 {
+  width: 560.04px;
+  height: 378.95px;
+}
+.img-header-2 {
+  width: 251px;
+  height: 109.67px;
+  margin-bottom: 20px;
+}
+.img-header-3 {
+  margin-bottom: 20px;
+}
+/* !DETAIL HEADER */
+.detail-header-hospitals {
+  position: relative;
+  /* left: 10px; */
+}
+.accordions {
+  overflow-x: hidden;
+  box-shadow: 2px 8px 20px 2px rgba(0, 0, 0, 0.05);
+  margin-top: 30px;
+  margin-right: 3rem;
+  width: 120%;
+}
+.accordion-explanation {
+  width: 100%;
+  color: #1b262c;
+  overflow: hidden;
+}
+
+.acc-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 1em 0px 1em;
+  background: #fff;
+  font-weight: 100;
+  cursor: pointer;
+}
+.detail-hospital h3 {
+  width: 440px;
+  height: 60px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  padding-top: 15px;
+  padding-left: 29px;
+  color: #0f4c75;
+}
+.acc-label::after {
+  content: "";
+  background: url(/image/penyakit/btn-accordion.svg);
+  background-repeat: no-repeat;
+  width: 2em;
+  height: 1em;
+  margin-top: 30px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+.acc-label img {
+  width: auto;
+  height: 40px;
+  margin-top: 13.5px;
+}
+.acc-content {
+  max-height: 0;
+  padding: 0 1em;
+  transition: all 0.4s ease;
+  border-top: 1px solid rgba(0, 0, 0, 0.137);
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.acc-content p {
+  color: rgba(26, 37, 43, 0.5);
+  font-weight: 500;
+  font-size: 17px;
+}
+.title-label h5,
+p {
+  margin: 0;
+  margin-left: 1rem;
+  font-size: 18px;
+}
+
+.title-label h5 {
+  color: var(--second-color);
+  font-size: 16px;
+  height: 25px;
+  margin-top: 8px;
+  padding: 0px 1rem 0px 0px;
+}
+.title-label p {
+  color: rgba(26, 37, 43, 0.5);
+  font-size: 14px;
+  font-weight: 600;
+  height: 25px;
+  margin-bottom: 10px;
+  padding: 0;
+}
+.label-1 {
+  margin-right: 100px;
+}
+.label-2 {
+  margin-right: 26px;
+}
+.label-3 {
+  margin-right: 55px;
+}
+.label-4 {
+  margin-right: 0;
+}
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+}
+input:checked + .acc-label::after {
+  transform: rotate(90deg);
+}
+input:checked ~ .acc-content {
+  max-height: 100vh;
+  padding: 1em;
+}
+/* !SERICE HOSPITAL */
+.service-hospital {
+  margin-bottom: 7rem;
+}
+.main-fasilitas h5 {
+  padding-bottom: 25px;
+}
+.bi-check-circle {
+  background: rgba(36, 71, 249, 0.2);
+  color: rgba(36, 71, 249, 1);
+}
+.fasilitas-1 span,
+.fasilitas-2 span,
+.fasilitas-3 span,
+.fasilitas-4 span {
+  margin-left: 12px;
+}
+.fasilitas-1,
+.fasilitas-2 {
+  padding-bottom: 20px;
+}
+.main-fasilitas-2 {
+  margin-left: 40px;
+}
+.main-fasilitas-2 h5 {
+  padding-bottom: 25px;
+}
+/* !GAELERI RUMAH SAKIT */
+.galery-rumah-sakit {
+  height: 100vh;
+}
+.galery-rumah-sakit h5 {
+  font-weight: 600;
+  font-size: 20px;
+  padding-bottom: 30px;
+  color: rgba(18, 18, 18, 0.75);
+}
+.galeri-1,
+.galeri-2,
+.galeri-3,
+.galeri-4 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+
+@media (max-width: 620px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* !NAVBAR */
+  .navbar {
+    display: block;
+    width: 100%;
+    padding: 0 !important;
+    padding-top: 12px !important ;
+    padding-bottom: 10px !important ;
+    position: fixed;
+    z-index: 3;
+  }
+  .navbar-nav{
+    background: #eaeaea;
+  }
+
+  .bg-transparent {
+    transition: all ease-in 0.3s;
+  }
+  .nav-link {
+    padding: 20px 0px 20px 0px !important;
+  }
+  .nav-link a {
+    margin-top: 100px !important ;
+  }
+  .navbar-brand {
+    position: relative;
+    right: 35px;
+  }
+  .navbar-brand span {
+    margin-left: 8px;
+  }
+  .navbar-links {
+    position: fixed;
+    top: -275px;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+  /* MENU TOGGLE */
+  .menu-toggle {
+    display: flex;
+  }
+  .top-menu {
+    z-index: -1;
+  }
+  nav ul {
+    position: relative;
+    /* top: -140px;
+    left: -50px; */
+    width: 100%;
+    background: var(--second-color);
+    align-items: center;
+    transform: translateY(0);
+    transition: all 0.5s;
+    opacity: 0;
+    border-radius: 0 0 10px 10px;
+  }
+
+  nav ul.slide {
+    display: flex;
+    transform: translateY(100%);
+    opacity: 1;
+  }
+
+  /* !HEADER */
+  .header-detail-hospitals {
+    margin-left: 0;
+  }
+  .img-header-1{
+    width: auto;
+    height: 400px;
+  }
+  .header-img-2 {
+    margin-left: 100px;
+    padding-bottom: 3em;
+  }
+  /* !DETAIL HEADER */
+  .detail-header-hospitals {
+    position: relative;
+    left: 30px;
+  }
+  .acc-label {
+    width: auto;
+  }
+/* !SERICE HOSPITAL */
+  .main-fasilitas-2 {
+    margin: 0;
+    padding-top: 3em;
+  }
+  /* !GAELERI RUMAH SAKIT */
+.galery-rumah-sakit {
+  height: 35vh;
+}
+}

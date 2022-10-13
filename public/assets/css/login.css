@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap");
+:root {
+  --first-color: #1b262c;
+  --second-color: #0f4c75;
+  --third-color: #3282b8;
+  --fourth-color: #bbe1fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  width: 100%;
+}
+.bg-login img {
+  height: 100vh;
+  width: 100%;
+  padding: 0%;
+  object-fit: cover;
+}
+
+.bg-login {
+  padding: 0%;
+}
+
+.form-login {
+  display: flex;
+  justify-content: center;
+  background-image: url(../images/bg-form.png);
+  background-size: 100% 100%;
+  padding: unset;
+}
+
+.form-isi {
+  display: flex;
+  justify-content: center;
+  margin-top: 65px;
+}
+
+.form-login h2 {
+  font-family: "Poppins";
+  font-weight: bolder;
+  font-size: 36px;
+}
+
+.form-login p {
+  font-family: "Noto sans";
+  color: #121212;
+  font-size: 20px;
+  opacity: calc(70%);
+}
+
+.form-isi .form-check a {
+  text-decoration: none;
+  color: #121212;
+  font-family: "Poppins";
+  font-size: 12px;
+}
+
+.form-isi a {
+  text-decoration: none;
+}
+
+.form-isi button {
+  font-family: "Poppins";
+  border-radius: 10px;
+}
+
+.form-control {
+  border-radius: 10px;
+  background-color: #e9eff6;
+}
+
+.form-content span {
+  background-color: #e9eff6 !important;
+}
+
+.form-content p {
+  font-family: "Poppins" !important;
+  font-size: 13px;
+  opacity: calc(70%);
+  border-bottom: 2px solid #d2d7dc;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+
+.line-kuning {
+  border-bottom: 3px solid #ffb93c;
+  line-height: 0.4em;
+  display: inline-table;
+}
+
+.form-content p span {
+  background: #fff;
+  padding: 0 0px;
+  background-color: #fff !important;
+}
+
+.another-login {
+  display: flex;
+  justify-content: center;
+}
+.another-login button {
+  border-color: #d2d7dc;
+}
+
+.another-login img {
+  width: 40px;
+  height: 40px;
+}
+.bi-instagram {
+  color: #fd1d1d;
+}
+.bi-google {
+  color: #e23a2e;
+}

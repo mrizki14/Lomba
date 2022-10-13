@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" />
+    <!-- ICON BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- SWIPER JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- LOGO -->
+    <link rel="icon" href="image/brand-1.png" />
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="about.css" />
+    <title>HisCARE - About</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-expand-lg navbar-expand-xl py-5">
+      <div class="container-fluid px-5">
+        <a class="navbar-brand" href="#"><img src="/image/brand-1.png" alt="brand-2" /><span>His</span><b>CARE</b></a>
+        <div class="menu-toggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="navbar-links">
+          <ul class="top-menu navbar-nav ms-auto">
+            <li><a class="nav-link mx-3" aria-current="page" href="#">Beranda</a></li>
+            <li><a class="nav-link active mx-3" href="#">Rumah Sakit</a></li>
+            <li><a class="nav-link mx-3" href="/diseases.html">Penyakit</a></li>
+            <li><a class="nav-link mx-3" href="#">Tentang</a></li>
+            <li>
+              <a class="nav-link mx-3 login" href="/login.html">Masuk <img src="/image/icon/icon-login-2.svg" alt="icon-login" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <script src="/assets/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
