@@ -12,13 +12,13 @@
         <div class="navbar-links">
           <ul class="top-menu navbar-nav ms-auto">
             <li><a class="nav-link mx-3 {{ Request::is('/') ? 'active' : '' }} " aria-current="page" href="/">Beranda</a></li>
-            <li><a class="nav-link mx-3 {{ Request::is('rumahsakit') ? 'active' : '' }} " href="/rumahsakits">Rumah Sakit</a></li>
-            <li><a class="nav-link mx-3" href="/penyakit">Penyakit</a></li>
+            <li><a class="nav-link mx-3 {{ Request::is('rumahsakits') ? 'active' : '' }} " href="/rumahsakits">Rumah Sakit</a></li>
+            <li><a class="nav-link mx-3" href="/penyakits">Penyakit</a></li>  
             <li><a class="nav-link mx-3" href="/tentang">Tentang</a></li>
             @guest               
             <li>
               <a class="nav-link mx-3 login" href="/login">Masuk <img src="{{ asset('assets/image/icon/icon-login-2.svg') }}" alt="icon-login" /></a>
-            </li>
+            </li> 
             @endguest
             @auth
             <li><a class="nav-link mx-3" href="/dashboard">Dashboard</a></li>

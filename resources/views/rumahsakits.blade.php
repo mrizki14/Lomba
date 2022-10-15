@@ -127,7 +127,7 @@
                         <i class="bi bi-star-fill"></i>
                       </div>
                       <div class="btn-detail-hospitals">
-                        <a href="{{ route('hospitals.show',$d->id)}}" class="btn btn-detail-hospitals-1">Check Room</a>
+                        <a href="{{ route('rumahsakit',$d->id) }}" class="btn btn-detail-hospitals-1">Check Room</a>
                         <a href="{{ url('/rsai') }}" class="btn btn-detail-hospitals-2">View Details</a>
                       </div>
                     </div>
@@ -137,11 +137,8 @@
               @endforeach
             </div>
           </div>
-          
         </div>
-      </div>
-
-      
+      </div> 
     </main>
     @include('layouts.home.footer')
   </body>

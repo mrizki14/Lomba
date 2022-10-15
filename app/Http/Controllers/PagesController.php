@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Disease;
 use App\Models\Hospital;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -14,16 +15,23 @@ class PagesController extends Controller
         // dd($keyword);
         return view('/index');
     }
-    public function rumahsakit()
+    public function rumahsakits()
     {
         $hospitals = Hospital::latest()->paginate(6);
 
         return view('/rumahsakits', compact('hospitals'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+            ->with('i', (request()->input('page', 1) - 1) * 6);
     }
-    public function penyakit()
+    public function penyakits(Request $request)
     {
-        return view('/penyakit');
+
+        $penyakit = $request->penyakit;
+        $diseases = Disease::where('nama', 'LIKE', '%' . $penyakit . '%')
+            ->orWhere('kualifikasi', 'LIKE', '%' . $penyakit . '%')
+            ->paginate(9);
+
+        return view('penyakits', compact('diseases'))
+            ->with('i', (request()->input('page', 1) - 1) * 9);
     }
     public function tentang()
     {

@@ -17,14 +17,14 @@
   <body>
     <!-- *NAVBAR -->
     @include('layouts.home.navbar')
-    <!-- *HERO -->
+    <!-- *HERO -->     
     <header>
       <div class="header-detail-hospitals">
         <div class="container-fluid">
           <div class="row">
             <div class="col-sm-12 col-md-5 col-lg-5">
               <div class="title-header">
-                <h5>RSAI Jawa Barat</h5>
+                <h5>{{ $hospital->nama }}</h5>
               </div>
               <div class="header-img-1">
                 <img src="{{ asset('assets/image/Hospitals/Hospital-1.png')}}" class="img-header-1" alt="" />
@@ -53,7 +53,8 @@
                       </label>
                       <div class="acc-content">
                         <p>
-                          RS Al Islam Bandung adalah Rumah Sakit milik Yayasan RSI KSWI Jawa Barat yang mempunyai visi "Menjadi Rumah Sakit Yang Unggul, Terpercaya dan Islami dalam Pelayanan dan Pendidikan"
+                          {{ $hospital->deskripsi }}
+                          {{-- RS Al Islam Bandung adalah Rumah Sakit milik Yayasan RSI KSWI Jawa Barat yang mempunyai visi "Menjadi Rumah Sakit Yang Unggul, Terpercaya dan Islami dalam Pelayanan dan Pendidikan" --}}
                         </p>
                       </div>
                     </div>
@@ -70,7 +71,8 @@
                       </label>
                       <div class="acc-content">
                         <p>
-                          RS Al Islam Bandung memiliki layanan spesialis dan fasilitas penunjang medis yang cukup lengkap. Adapaun layanan unggulan yang dimiliki RSAI Bandung antara lain : Kateterisasi Jantung baik Dewasa maupun anak, Hemodialisa (cuci darah), kemoterapi, pemeriksaan MSCT  160 slice, serta Endoscopy. Pada masa pandemic covid 19 ini RSAI Bandung melengkapi dengan fasilitas perawatan isolasi serta fasiltas pemeriksaan Covid 19 baik itu rapid antibody, rapid antigen dan PCR yang dilakukan secara mandiri.
+                          {{ $hospital->keahlian_penyakit }}
+                          {{-- RS Al Islam Bandung memiliki layanan spesialis dan fasilitas penunjang medis yang cukup lengkap. Adapaun layanan unggulan yang dimiliki RSAI Bandung antara lain : Kateterisasi Jantung baik Dewasa maupun anak, Hemodialisa (cuci darah), kemoterapi, pemeriksaan MSCT  160 slice, serta Endoscopy. Pada masa pandemic covid 19 ini RSAI Bandung melengkapi dengan fasilitas perawatan isolasi serta fasiltas pemeriksaan Covid 19 baik itu rapid antibody, rapid antigen dan PCR yang dilakukan secara mandiri. --}}
                         </p>
                       </div>
                     </div>
@@ -194,6 +196,7 @@
         </div>
       </div>
     </header>
+    
 
     <!-- !MAIN -->
     <div class="galery-rumah-sakit">

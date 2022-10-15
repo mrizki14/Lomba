@@ -31,7 +31,7 @@
         <div class="navbar-links">
           <ul class="top-menu navbar-nav ms-auto">
             <li><a class="nav-link mx-3 " aria-current="page" href="{{ url('/') }}">Beranda</a></li>
-            <li><a class="nav-link mx-3 " href="{{url ('/rumahsakit') }}">Rumah Sakit</a></li>
+            <li><a class="nav-link mx-3 " href="{{url ('/rumahsakits') }}">Rumah Sakit</a></li>
             <li><a class="nav-link mx-3" href="{{ url ('/penyakit') }}">Penyakit</a></li>
             <li><a class="nav-link mx-3 active" href="{{ url ('/tentang') }}">Tentang</a></li>
             <li>
