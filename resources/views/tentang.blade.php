@@ -19,28 +19,7 @@
     <title>HisCARE - Tentang</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-expand-lg navbar-expand-xl bg-transparent fixed-top py-3">
-      <div class="container-fluid px-5">
-        <a class="navbar-brand" href="#"><img src="{{ asset('assets/image/brand-2.png')}}" alt="brand-2" /><span>His</span><b>CARE</b></a>
-        <div class="menu-toggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="navbar-links">
-          <ul class="top-menu navbar-nav ms-auto">
-            <li><a class="nav-link mx-3 " aria-current="page" href="{{ url('/') }}">Beranda</a></li>
-            <li><a class="nav-link mx-3 " href="{{url ('/rumahsakits') }}">Rumah Sakit</a></li>
-            <li><a class="nav-link mx-3" href="{{ url ('/penyakit') }}">Penyakit</a></li>
-            <li><a class="nav-link mx-3 active" href="{{ url ('/tentang') }}">Tentang</a></li>
-            <li>
-              <a class="nav-link mx-3 login" href="{{ url ('/login') }}">Masuk <img src="{{ asset('assets/image/icon/icon-login.svg')}}" alt="icon-login" /></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    @include('layouts.home.navbar2')
 
     
   <main class="content pt-5">

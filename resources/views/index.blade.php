@@ -5,25 +5,27 @@
     <!-- *AKHIR NAVBAR -->
 
     <!-- *HERO -->
-    <div class="header-hero mb-5">
-      <div class="container">
+    <div class="header-hero pb-5">
+      <div class="container-fluid">
         <div class="row">
-          <div class="col-md-6 col-lg-6">
+          <div class="col-md-6">
+
             <!-- GAMBAR HERO -->
             <div class="hero-img">
-              <img class="img-hero" src="{{ asset('assets/image/img hero.png')}}" alt="" />
               <img class="icon-hd-1" src="{{ asset('assets/image/icon/icon-hd-1.svg')}}" />
-              <img class="icon-hd-2" src="{{ asset('assets/image/icon/icon-hd-2.svg')}}" />
               <img class="icon-hd-3" src="{{ asset('assets/image/icon/icon-hd-3.svg')}}" />
+              <img class="icon-hd-2" src="{{ asset('assets/image/icon/icon-hd-2.svg')}}" />
+              <img class="img-hero" src="{{ asset('assets/image/img hero.png')}}" alt="" />
             </div>
+
             <!-- CARD HERO -->
-            <div class="card card-hero mb-3">
-              <div class="row g-0">
+            <div class="card card-hero mb-3" style="width:20rem;">
+              <div class="row">
                 <div class="col-md-3 col-lg-3">
-                  <img src="{{ asset('assets/image/icon/icon-world.svg')}}" class="img-fluid rounded-start" alt="..." />
+                  <img src="{{ asset('assets/image/icon/icon-world.svg')}}" class="img-fluid icon-card rounded-start" alt="..." />
                 </div>
                 <div class="col-md-9 col-lg-9">
-                  <div class="card-body card-hero-detail">
+                  <div class="card-hero-detail">
                     <h5 class="card-title title-card-hero">Kesehatan di Indonesia</h5>
                     <p class="card-text text-card-hero">Selalu Jaga Kesehatanmu di kondisi Indonesia sekarang.</p>
                   </div>
@@ -31,7 +33,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-6">
+          <div class="col-md-6">
             <div class="jumbotron">
               <!-- MAIN JUMBOTRON -->
               <h2>Buat Hidup Lebih Sehat</h2>
@@ -72,8 +74,9 @@
   </header>
   <!-- *AKHIR HERO -->
 
-  <main>
-    <div class="section-services">
+  {{-- SERVICES --}}
+  <section>
+    <div class="section-services pt-5">
       <div class="container">
         <div class="main-services">
           <h2>PELAYANAN KAMI</h2>
@@ -83,48 +86,58 @@
           </p>
         </div>
         <div class="card-services">
-          <div class="row">
+          <div class="row d-flex justify-content-between">
             <div class="col-12 col-sm-6 col-lg-2">
-              <div class="card card-services-1">
-                <img src="{{ asset('assets/image/icon/icon-service-1.svg')}}" class="img-fluid img-card-service" alt="..." />
-                <div class="card-body card-body-services">
+              <div class="card card-services-1" style="width: 14rem;">
+                <div class="card-title d-flex align-items-center">
+                  <img src="{{ asset('assets/image/icon/icon-service-1.svg')}}" class="img-fluid img-card-service" alt="..." />
                   <h5 class="card-title-service">Medical Services</h5>
+                </div>
+                <div class="card-body card-body-services">
                   <p class="card-text-service">Pelayanan kedokteran (medical services) merupakan pelayanan kesehatan yang cara pengorganisasiannya secara individu/sendiri.</p>
                 </div>
               </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-2">
-              <div class="card card-services-2">
+              <div class="card card-services-2"style="width: 14rem;">
+                <div class="card-title d-flex align-items-center">
                 <img src="{{ asset('assets/image/icon/icon-service-2.svg')}}" class="img-fluid img-card-service" alt="..." />
+                <h5 class="card-title-service">Medical Check Up</h5>
+                </div>
                 <div class="card-body card-body-services">
-                  <h5 class="card-title-service">Medical Check Up</h5>
                   <p class="card-text-service">Medical check up adalah pemeriksaan kesehatan dengan cara menyeluruh supaya bisa menangani yang baik sebelum penyakit bertambah parah.</p>
                 </div>
               </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-2">
-              <div class="card card-services-3">
-                <img src="{{ asset('assets/image/icon/icon-service-3.svg')}}" class="img-fluid img-card-service" alt="..." />
-                <div class="card-body card-body-services">
+              <div class="card card-services-3"style="width: 14rem;">
+                <div class="card-title d-flex align-items-center">
+                  <img src="{{ asset('assets/image/icon/icon-service-3.svg')}}" class="img-fluid img-card-service" alt="..." />
                   <h5 class="card-title-service">Ambulatory Services</h5>
+                </div>
+                <div class="card-body card-body-services">
                   <p class="card-text-service">Perawatan rawat jalan adalah prosedur medis di hari yang sama yang dilakukan dalam pengaturan rawat jalan. </p>
                 </div>
               </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-2">
-              <div class="card card-services-4">
+              <div class="card card-services-4"style="width: 14rem;">
+                <div class="card-title d-flex align-items-center">
                 <img src="{{ asset('assets/image/icon/icon-service-4.svg')}}" class="img-fluid img-card-service" alt="..." />
+                <h5 class="card-title-service">Public Health Service</h5>
+                </div>
                 <div class="card-body card-body-services">
-                  <h5 class="card-title-service">Public Health Service</h5>
                   <p class="card-text-service">Pelayanan kesehatan masyarakat merupakan bentuk pelayanan kesehatan yang dilakukan secara bersama-sama di dalam organisasi.</p>
                 </div>
               </div>
             </div>
             <div class="col-12 col-sm-12 col-lg-2">
-              <div class="card card-services-5">
+              <div class="card card-services-5"style="width: 14rem;">
+                <div class="card-title d-flex align-items-center">
                 <img src="{{ asset('assets/image/icon/icon-service-5.svg')}}" class="img-fluid img-card-service" alt="..." />
+                <h5 class="card-title-service">Inpatient Services</h5>
+                </div>
                 <div class="card-body card-body-services">
-                  <h5 class="card-title-service">Inpatient Services</h5>
                   <p class="card-text-service">Rawat inap adalah pelayanan kesehatan perorangan, yang meliputi kesehatan pasien dengan menginap di ruang rawat inap.</p>
                 </div>
               </div>
@@ -133,9 +146,10 @@
         </div>
       </div>
     </div>
+  </section>
 
     <!-- * WORKS -->
-    <div class="section-works vh-100">
+    <div class="section-works pt-5 pb-5">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-lg-6">
@@ -147,36 +161,44 @@
             <div class="row card-works">
               <div class="col-12 col-sm-12 col-xl-6">
                 <div class="card card-works-1">
+                  <div class="card-title d-flex align-items-center">
                   <img src="{{ asset('assets/image/icon/icon-work-1.svg')}}" class="img-fluid img-card-work" alt="..." />
-                  <div class="card-body">
-                    <h5 class="card-title title-card-works">Cek Kondisi Tubuh</h5>
+                  <h5 class="card-title title-card-works">Cek Kondisi Tubuh</h5>
+                  </div>
+                  <div class="card-body card-body-work">
                     <p class="card-text text-card-works">Melakukan pengecekan terlebih dahulu dengan teliti sebelum menangi lebih lanjut </p>
                   </div>
                 </div>
               </div>
               <div class="col-12 col-sm-12 col-xl-6">
                 <div class="card card-works-2">
+                  <div class="card-title d-flex align-items-center">
                   <img src="{{ asset('assets/image/icon/icon-work-2.svg')}}" class= "img-fluid img-card-work" alt="..." />
-                  <div class="card-body">
-                    <h5 class="card-title title-card-works">Penanganan lebih lanjut</h5>
+                  <h5 class="card-title title-card-works">Penanganan lebih lanjut</h5>
+                  </div>
+                  <div class="card-body card-body-work">
                     <p class="card-text text-card-works">Setelah mengetahui gejalanya pasien akan diberi penanganan lebih lanjut</p>
                   </div>
                 </div>
               </div>
               <div class="col-12 col-sm-12 col-xl-6 ">
                 <div class="card card-works-3">
+                  <div class="card-title d-flex align-items-center">
                   <img src="{{ asset('assets/image/icon/icon-work-3.svg')}}" class="img-fluid img-card-work" alt="..." />
-                  <div class="card-body">
-                    <h5 class="card-title title-card-works">Pendekatan Psikologis</h5>
+                  <h5 class="card-title title-card-works">Pendekatan Psikologis</h5>
+                  </div>
+                  <div class="card-body card-body-work">
                     <p class="card-text text-card-works">Tidak hanya secara medis tetapi juga menggunakan pendekatan psikologis</p>
                   </div>
                 </div>
               </div>
               <div class="col-12 col-sm-12 col-xl-6">
                 <div class="card card-works-4">
+                  <div class="card-title d-flex align-items-center">
                   <img src="{{ asset('assets/image/icon/icon-work-4.svg')}}" class="img-fluid img-card-work" alt="..." />
-                  <div class="card-body">
-                    <h5 class="card-title title-card-works">Memantau 24/7</h5>
+                  <h5 class="card-title title-card-works">Memantau 24/7</h5>
+                  </div>
+                  <div class="card-body card-body-work">
                     <p class="card-text text-card-works">Kenyamanan,keamanan pasien dan keluarga menjadi prioritas terbesar kami dalam menangani seseorang.</p>
                   </div>
                 </div>
@@ -187,33 +209,37 @@
           <div class="col-sm-12 col-lg-6">
             <div class="work-img">
               <img class="img-work" src="{{ asset('assets/image/img-services.svg')}}" alt="" />
-              <div class="card card-img-work-1 mb-3">
-                <div class="row g-0">
-                  <div class="col-md-3 col-lg-3">
-                    <img src="{{ asset('assets/image/icon/icon-world-2.svg')}}" class="img-fluid img-card rounded-start" alt="..." />
-                  </div>
-                  <div class="col-md-9 col-lg-9">
-                    <div class="card-body card-works-5">
-                      <h5 class="card-title title-works">Kesehatan di Indonesia</h5>
-                      <p class="card-text text-works">Selalu Jaga Kesehatanmu di kondisi Indonesia sekarang.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card card-img-work-2 mb-3">
-                <div class="row g-0">
-                  <div class="col-md-3 col-lg-3">
-                    <img src="{{ asset('assets/image/icon/icon-world-2.svg')}}" class="img-fluid img-card rounded-start" alt="..." />
-                  </div>
-                  <div class="col-md-9 col-lg-9">
-                    <div class="card-body card-works-5">
-                      <h5 class="card-title title-works">Kesehatan di Indonesia</h5>
-                      <p class="card-text text-works">Selalu Jaga Kesehatanmu di kondisi Indonesia sekarang.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
               <img class="icon-works" src="{{ asset('assets/image/icon/icon-healty.svg')}}" alt="" />
+
+              <div class="card card-work-1 mb-3" style="width:20rem;">
+                <div class="row">
+                  <div class="col-md-3 col-lg-3">
+                    <img src="{{ asset('assets/image/icon/icon-world-2.svg')}}" class="img-fluid icon-card rounded-start" alt="..." />
+                  </div>
+                  <div class="col-md-9 col-lg-9">
+                    <div class="card-work-detail">
+                      <h5 class="card-title title-card-work">Kesehatan di Indonesia</h5>
+                      <p class="card-text text-card-work">Selalu Jaga Kesehatanmu di kondisi Indonesia sekarang.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card card-work-2 mb-3" style="width:20rem;">
+                <div class="row">
+                  <div class="col-md-3 col-lg-3">
+                    <img src="{{ asset('assets/image/icon/icon-world-2.svg')}}" class="img-fluid icon-card rounded-start" alt="..." />
+                  </div>
+                  <div class="col-md-9 col-lg-9">
+                    <div class="card-work-detail">
+                      <h5 class="card-title title-card-work">Kesehatan di Indonesia</h5>
+                      <p class="card-text text-card-work">Selalu Jaga Kesehatanmu di kondisi Indonesia sekarang.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -221,46 +247,121 @@
     </div>
 
     <!-- *SPECIALIST -->
+    <section>
+    <div class="section-specialist pb-5">
+      <div class="container" data-swipe-threshold="100">
 
-    <div class="section-specialist">
-      <div class="container">
-        <div class="main-specialist">
+        <div class="title-specialist">
           <h2>TIM SPESIALIS KAMI</h2>
           <h1>Kunjungi Bersama Tim Spesialis Kami</h1>
         </div>
-        <div class="owl-carousel owl-specialist owl-theme">         
-            <div class="specialist-1">
-              <img class="card-specialist-1 item" src="{{ asset('assets/image/img-dr-1.png')}}" />
-              <div class="docter-1">
-                <h4>Dr. Alena George</h4>
-                <p>Ahli reumatologi</p>
+
+        <input type="radio" name="dot" id="one">
+        <input type="radio" name="dot" id="two">
+        <input type="radio" name="dot" id="three">
+
+        <div class="card-specialist pt-3 ">         
+            <div class="specialists pt-5">
+              <div class="specialist-1">
+                <img class="img-fluid card-specialist-1 item" src="{{ asset('assets/image/img-dr-1.png')}}" />
+                <div class="docter-1">
+                  <h4>Dr. Alena George</h4>
+                  <p>Ahli reumatologi</p>
+                </div>
               </div>
+              <div class="specialist-2">
+                <img class=" img-fluid card-specialist-2 item" src="{{ asset('assets/image/img-dr-2.png')}}" />
+                <div class="docter-2">
+                  <h4>Dr. Ashlynn Aminoff</h4>
+                  <p>Praktisi Perawat Psikiatri & Kesehatan Mental Dewasa</p>
+                </div>
+              </div> 
+              <div class="specialist-3">
+                <img class="img-fluid card-specialist-3 item" src="{{ asset('assets/image/img-dr-3.png')}}" />
+                <div class="docter-3">
+                  <h4>Dr. Andrea Sczesny, MD</h4>
+                  <p>Dokter Gawat Darurat</p>
+                </div>
+              </div> 
+              <div class="specialist-4">              
+                <img class="img-fluid card-specialist-4 item" src="{{ asset('assets/image/img-dr-4.png')}}" />
+                <div class="docter-4">
+                  <h4>Dr. Andrea Sczesny, MD</h4>
+                  <p>Ahli Spesialis Bedah</p>
+                </div>
+              </div>                                   
             </div>
-            <div class="specialist-2">
-              <img class="card-specialist-2 item" src="{{ asset('assets/image/img-dr-2.png')}}" />
-              <div class="docter-2">
-                <h4>Dr. Ashlynn Aminoff</h4>
-                <p>Praktisi Perawat Psikiatri & Kesehatan Mental Dewasa</p>
+            <div class="specialists pt-5">
+              <div class="specialist-1">
+                <img class="img-fluid card-specialist-1 item" src="{{ asset('assets/image/img-dr-1.png')}}" />
+                <div class="docter-1">
+                  <h4>Dr. Alena George</h4>
+                  <p>Ahli reumatologi</p>
+                </div>
               </div>
-            </div> 
-            <div class="specialist-3">
-              <img class="card-specialist-3 item" src="{{ asset('assets/image/img-dr-3.png')}}" />
-              <div class="docter-3">
-                <h4>Dr. Andrea Sczesny, MD</h4>
-                <p>Dokter Gawat Darurat</p>
+              <div class="specialist-2">
+                <img class=" img-fluid card-specialist-2 item" src="{{ asset('assets/image/img-dr-2.png')}}" />
+                <div class="docter-2">
+                  <h4>Dr. Ashlynn Aminoff</h4>
+                  <p>Praktisi Perawat Psikiatri & Kesehatan Mental Dewasa</p>
+                </div>
+              </div> 
+              <div class="specialist-3">
+                <img class="img-fluid card-specialist-3 item" src="{{ asset('assets/image/img-dr-3.png')}}" />
+                <div class="docter-3">
+                  <h4>Dr. Andrea Sczesny, MD</h4>
+                  <p>Dokter Gawat Darurat</p>
+                </div>
+              </div> 
+              <div class="specialist-4">              
+                <img class="img-fluid card-specialist-4 item" src="{{ asset('assets/image/img-dr-4.png')}}" />
+                <div class="docter-4">
+                  <h4>Dr. Andrea Sczesny, MD</h4>
+                  <p>Ahli Spesialis Bedah</p>
+                </div>
+              </div>                                   
+            </div>
+            <div class="specialists pt-5">
+              <div class="specialist-1">
+                <img class="img-fluid card-specialist-1 item" src="{{ asset('assets/image/img-dr-1.png')}}" />
+                <div class="docter-1">
+                  <h4>Dr. Alena George</h4>
+                  <p>Ahli reumatologi</p>
+                </div>
               </div>
-            </div> 
-            <div class="specialist-4">              
-              <img class="card-specialist-4 item" src="{{ asset('assets/image/img-dr-4.png')}}" />
-              <div class="docter-4">
-                <h4>Dr. Andrea Sczesny, MD</h4>
-                <p>Ahli Spesialis Bedah</p>
-              </div>
-            </div>                                   
-          </div>
+              <div class="specialist-2">
+                <img class=" img-fluid card-specialist-2 item" src="{{ asset('assets/image/img-dr-2.png')}}" />
+                <div class="docter-2">
+                  <h4>Dr. Ashlynn Aminoff</h4>
+                  <p>Praktisi Perawat Psikiatri & Kesehatan Mental Dewasa</p>
+                </div>
+              </div> 
+              <div class="specialist-3">
+                <img class="img-fluid card-specialist-3 item" src="{{ asset('assets/image/img-dr-3.png')}}" />
+                <div class="docter-3">
+                  <h4>Dr. Andrea Sczesny, MD</h4>
+                  <p>Dokter Gawat Darurat</p>
+                </div>
+              </div> 
+              <div class="specialist-4">              
+                <img class="img-fluid card-specialist-4 item" src="{{ asset('assets/image/img-dr-4.png')}}" />
+                <div class="docter-4">
+                  <h4>Dr. Andrea Sczesny, MD</h4>
+                  <p>Ahli Spesialis Bedah</p>
+                </div>
+              </div>                                   
+            </div>
+        </div>
+
+        <div class="button-specialist">
+          <label for="one" class="one active"></label>
+          <label for="two" class="two"></label>
+          <label for="three" class="three"></label>
+        </div>
+
         </div>        
       </div>
-    </div>
+    </section>
 
     <!-- *AKHIR SECTION SPECIALIST -->
     <!-- *CUSTOMER SAY -->
@@ -324,5 +425,5 @@
         </div>
       </div>
     </div>
-  </main>
+
 @endsection

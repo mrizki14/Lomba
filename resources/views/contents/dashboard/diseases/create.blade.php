@@ -38,6 +38,12 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 mb-3">
+                <div class="form-group">
+                    <strong>Nama Medis</strong>
+                    <input type="text" name="nama_medis" class="form-control" placeholder="Masukan Nama Medis Penyakit">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 mb-3">
                 <strong>Tingkat Bahaya</strong>
                 <select class="form-select" name="tingkat_bahaya" required="required">
                     <option selected>Pilih Tingkat Bahaya</option>
@@ -65,8 +71,14 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Pengertian</strong>
-                    <textarea class="form-control" style="height:150px" name="pengertian" placeholder="Penjelasan Mengenai Penyakit"></textarea>
+                    <strong>Pengertian Organ</strong>
+                    <textarea class="form-control" style="height:150px" name="pengertian" placeholder="Pengertian Mengenai Organ"></textarea>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Penjelasan</strong>
+                    <textarea class="form-control" style="height:150px" name="penjelasan" placeholder="Penjelasan Mengenai Penyakit"></textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center mt-3">

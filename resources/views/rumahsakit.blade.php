@@ -89,9 +89,10 @@
                       </label>
                       <div class="acc-content">
                         <p>
-                          1. Konsumsi Banyak Cairan (minum 2-3 liter per hari) <br />
+                          {{ $hospital->obat_penyakit }}
+                          {{-- 1. Konsumsi Banyak Cairan (minum 2-3 liter per hari) <br />
                           2. Cairan Intravena (Infus) <br />
-                          3. Bedrest Total (beristirahat) <br />4. Kompres seluruh badan <br />
+                          3. Bedrest Total (beristirahat) <br />4. Kompres seluruh badan <br /> --}}
                          
                         </p>
                       </div>
@@ -109,7 +110,8 @@
                       </label>
                       <div class="acc-content">
                         <p>
-                          Dengan cara pendekatan secara psikolog,operasi dan diberikan obat yang sesuai dengan resep para dokter yang ahli di bidangnya
+                          {{ $hospital->rincian_penanganan }}
+                          {{-- Dengan cara pendekatan secara psikolog,operasi dan diberikan obat yang sesuai dengan resep para dokter yang ahli di bidangnya --}}
                         </p>
                       </div>
                     </div>

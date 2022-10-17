@@ -14,8 +14,9 @@ class DiseaseController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Disease $disease)
+    public function show($id)
     {
+        $hospital = Disease::where('id', $id)->first();
         return view('penyakit', compact('disease'));
     }
 }

@@ -184,6 +184,7 @@ header {
 }
 
 /* !MAIN */
+
 .main-disease,
 .jenis-penyakit,
 .search-penyakit {
@@ -232,6 +233,10 @@ header {
 }
 
 /* LIST PENYAKIT */
+.list-penyakit.col-sm-12.col-md-8.col-lg-8 {
+  height: 1100px;
+  overflow-y: scroll;
+}
 .jenis-penyakit {
   padding: 50px 0px 55px 0px;
   display: flex;
@@ -480,6 +485,7 @@ button,
     position: relative;
     display: block;
   }
+
   .jenis-penyakit {
     width: 250px !important;
   }

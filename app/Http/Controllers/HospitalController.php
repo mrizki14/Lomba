@@ -16,8 +16,9 @@ class HospitalController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Hospital $hospital)
+    public function show($id)
     {
+        $hospital = Hospital::where('id', $id)->first();
         return view('rumahsakit', compact('hospital'));
     }
 }

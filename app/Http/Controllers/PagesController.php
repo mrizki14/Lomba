@@ -22,16 +22,28 @@ class PagesController extends Controller
         return view('/rumahsakits', compact('hospitals'))
             ->with('i', (request()->input('page', 1) - 1) * 6);
     }
+
+    public function detailrumahsakit($id)
+    {
+        $hospital = Hospital::find($id);
+        return view('/rumahsakit', compact('hospital'));
+    }
+
     public function penyakits(Request $request)
     {
 
         $penyakit = $request->penyakit;
         $diseases = Disease::where('nama', 'LIKE', '%' . $penyakit . '%')
             ->orWhere('kualifikasi', 'LIKE', '%' . $penyakit . '%')
-            ->paginate(9);
+            ->get();
 
-        return view('penyakits', compact('diseases'))
-            ->with('i', (request()->input('page', 1) - 1) * 9);
+        return view('penyakits', compact('diseases'));
+        // ->with('i', (request()->input('page', 1) - 1) * 9);
+    }
+    public function detailpenyakit($id)
+    {
+        $disease = Disease::find($id);
+        return view('/penyakit', compact('disease'));
     }
     public function tentang()
     {

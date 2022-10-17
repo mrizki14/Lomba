@@ -5,15 +5,16 @@ namespace App\Http\Controllers;
 use App\Models\Disease;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use PhpParser\Node\NullableType;
 
 class DiseasesController extends Controller
 {
     public function index()
     {
-        $diseases = Disease::paginate(6);
+        $diseases = Disease::paginate(10);
 
         return view('contents.dashboard.diseases.index', compact('diseases'))
-            ->with('i', (request()->input('page', 1) - 1) * 6);
+            ->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
     /**
@@ -39,8 +40,10 @@ class DiseasesController extends Controller
         $request->validate([
             'nama' => 'required',
             'kualifikasi' => 'required',
+            'nama_medis' => 'required',
             'tingkat_bahaya' => 'required',
             'pengertian' => 'required',
+            'penjelasan' => 'required',
             'penyebab' => 'required',
             'obat' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
@@ -55,8 +58,10 @@ class DiseasesController extends Controller
         Disease::create([
             'nama' => $request->input('nama'),
             'kualifikasi' => $request->input('kualifikasi'),
+            'nama_medis' => $request->input('nama_medis'),
             'tingkat_bahaya' => $request->input('tingkat_bahaya'),
             'pengertian' => $request->input('pengertian'),
+            'penjelasan' => $request->input('penjelasan'),
             'penyebab' => $request->input('penyebab'),
             'obat' => $request->input('obat'),
             'image_path' => $imagesDiseases,
@@ -103,6 +108,7 @@ class DiseasesController extends Controller
             'kualifikasi' => 'required',
             'tingkat_bahaya' => 'required',
             'pengertian' => 'required',
+            'penjelasan' => 'required',
             'penyebab' => 'required',
             'obat' => 'required',
 

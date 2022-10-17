@@ -20,48 +20,51 @@
 </head>
 <body>
 
-    <div class="section-login">
-        <div class="row">
-            <div class="bg-login col-sm-6">
-                <img src="../assets/images/bg-register.png" alt="">
-            </div>
-            <div class="form-login col-sm-6">
-                <div class="form-isi w-50">
-                    <div class="welcome">
-                        <h2>Daftar Untuk Jadi <br><span class="line-kuning">Pahlawan</span> !</h2>
-                        <p class="mt-3">Daftarkan dirimu untuk berpetualang<br>dan menjadi seorang pahlawan</p>
-                        <form class="mt-5 form-content" action="login.html">
-                            <div class="input-group mb-3 shadow-sm">
-                                <span class="input-group-text p-2 border-0" id="basic-addon1"><i
-                                        class="fas fa-user"></i></span>
-                                <input type="text" class="form-control border-0 p-2" placeholder="Masukan Nama Lengkap"
-                                    aria-label="Belajar mewarnai" aria-describedby="basic-addon1">
-                            </div>
-                            <div class="input-group mb-3 shadow-sm">
-                                <span class="input-group-text p-2 border-0" id="basic-addon1"><i
-                                        class="fas fa-mail"></i></span>
-                                <input type="text" class="form-control border-0 p-2" placeholder="Masukan Email"
-                                    aria-label="Belajar mewarnai" aria-describedby="basic-addon1">
-                            </div>
-                            <div class="input-group mb-3 shadow-sm">
-                                <span class="input-group-text p-2 border-0" id="basic-addon1"><i
-                                        class="fas fa-lock"></i></span>
-                                <input type="text" class="form-control border-0 p-2" placeholder="Masukan Kata Sandi"
-                                    aria-label="Belajar mewarnai" aria-describedby="basic-addon1">
-                            </div>
-                            <div class="input-group mb-3 shadow-sm">
-                                <span class="input-group-text p-2 border-0" id="basic-addon1"><i
-                                        class="fas fa-lock"></i></span>
-                                <input type="text" class="form-control border-0 p-2" placeholder="Ulangi Kata Sandi"
-                                    aria-label="Belajar mewarnai" aria-describedby="basic-addon1">
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100 mt-3">Daftar</button>
-                          </form>
-                          <p class="text-center mt-5">Sudah punya akun ? <a href="/login">Masuk Sekarang</a></p>
+    <div class="container-fluid">
+
+        <div class="section-login">
+            <div class="row">
+                <div class="bg-login col-sm-6">
+                    <img src="../assets/images/bg-register.png" alt="">
+                </div>
+                <div class="form-login col-sm-6">
+                    <div class="form-isi w-50">
+                        <div class="welcome">
+                            <h2>Daftar Untuk Jadi <br><span class="line-kuning">Pahlawan</span> !</h2>
+                            <p class="mt-3">Daftarkan dirimu untuk berpetualang<br>dan menjadi seorang pahlawan</p>
+                            <form class="mt-5 form-content" action="login.html">
+                                <div class="input-group mb-3 shadow-sm">
+                                    <span class="input-group-text p-2 border-0" id="basic-addon1"><i
+                                            class="fas fa-user"></i></span>
+                                    <input type="text" class="form-control border-0 p-2" placeholder="Masukan Nama Lengkap"
+                                        aria-label="Belajar mewarnai" aria-describedby="basic-addon1">
+                                </div>
+                                <div class="input-group mb-3 shadow-sm">
+                                    <span class="input-group-text p-2 border-0" id="basic-addon1"><i
+                                            class="fas fa-mail"></i></span>
+                                    <input type="text" class="form-control border-0 p-2" placeholder="Masukan Email"
+                                        aria-label="Belajar mewarnai" aria-describedby="basic-addon1">
+                                </div>
+                                <div class="input-group mb-3 shadow-sm">
+                                    <span class="input-group-text p-2 border-0" id="basic-addon1"><i
+                                            class="fas fa-lock"></i></span>
+                                    <input type="text" class="form-control border-0 p-2" placeholder="Masukan Kata Sandi"
+                                        aria-label="Belajar mewarnai" aria-describedby="basic-addon1">
+                                </div>
+                                <div class="input-group mb-3 shadow-sm">
+                                    <span class="input-group-text p-2 border-0" id="basic-addon1"><i
+                                            class="fas fa-lock"></i></span>
+                                    <input type="text" class="form-control border-0 p-2" placeholder="Ulangi Kata Sandi"
+                                        aria-label="Belajar mewarnai" aria-describedby="basic-addon1">
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 mt-3">Daftar</button>
+                              </form>
+                              <p class="text-center mt-5">Sudah punya akun ? <a href="/login">Masuk Sekarang</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-     </div>
+    </div>
 </body>
 </html>

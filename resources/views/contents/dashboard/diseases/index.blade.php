@@ -21,6 +21,7 @@
                 <th>No</th>
                 <th>Nama</th>
                 <th>Kualifikasi</th>
+                <th>Nama Medis</th>
                 <th>Tingkat Bahaya</th>
                 <th width="280px">Action</th>
             </tr>
@@ -29,6 +30,7 @@
                 <td>{{ ++$i }}</td>
                 <td>{{ $d->nama }}</td>
                 <td>{{ $d->kualifikasi }}</td>
+                <td>{{ $d->nama_medis }}</td>
                 <td>{{ $d->tingkat_bahaya }}</td>
                 <td>
                     <form action="{{ route('diseases.destroy',$d->id) }}" method="POST">

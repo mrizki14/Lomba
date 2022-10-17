@@ -39,6 +39,12 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 mb-3">
+                    <div class="form-group">
+                        <strong>Nama Medis</strong>
+                        <input type="text" name="nama_medis" class="form-control" value="{{ $disease->nama_medis }}" placeholder="Masukan Kualifikasi Penyakit">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 mb-3">
                     <strong>Tingkat Bahaya</strong>
                     <select class="form-select" name="tingkat_bahaya" required="required">
                         <option selected>Pilih Tingkat Bahaya</option>
@@ -60,8 +66,14 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Pengertian</strong>
-                        <textarea class="form-control" style="height:150px" name="pengertian" placeholder="Penjelasan Mengenai Penyakit">{{ $disease->pengertian }}</textarea>
+                        <strong>Pengertian Organ</strong>
+                        <textarea class="form-control" style="height:150px" name="pengertian" placeholder="Pengertian Mengenai Organ">{{ $disease->pengertian }}</textarea>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Penjelasan Penyakit</strong>
+                        <textarea class="form-control" style="height:150px" name="penjelasan" placeholder="Penjelasan Mengenai Penyakit">{{ $disease->penjelasan }}</textarea>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center mt-3">

@@ -15,28 +15,7 @@
   </head>
   <body>
     <!-- *NAVBAR* -->
-    <nav class="navbar navbar-expand-md navbar-expand-lg navbar-expand-xl py-4">
-      <div class="container-fluid px-5">
-        <a class="navbar-brand" href="#"><img src="{{ asset('assets/image/brand-2.png')}}" alt="brand-2" /><span>His</span><b>CARE</b></a>
-        <div class="menu-toggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="navbar-links">
-          <ul class="top-menu navbar-nav ms-auto">
-            <li><a class="nav-link mx-3 " aria-current="page" href="{{ url('/') }}">Beranda</a></li>
-            <li><a class="nav-link mx-3 " href="{{url ('/rumahsakit') }}">Rumah Sakit</a></li>
-            <li><a class="nav-link mx-3 active" href="{{ url ('/penyakit') }}">Penyakit</a></li>
-            <li><a class="nav-link mx-3" href="{{ url ('/tentang') }}">Tentang</a></li>
-            <li>
-              <a class="nav-link mx-3 login" href="{{ url ('/login') }}">Masuk <img src="{{ asset('assets/image/icon/icon-login.svg')}}" alt="icon-login" /></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    @include('layouts.home.navbar')
 
     <!-- !DETAIL -->
     <header>
@@ -47,18 +26,17 @@
               <div class="content-penyakit">
                 <img src="{{ asset('assets/image/penyakit/img-asam-lambung.jpg')}}" alt="" />
                 <p>Nama Penyakit</p>
-                <h4>Asam Lambung</h4>
+                <h4>{{ $disease->nama }}</h4>
                 <p>Kualifikasi</p>
-                <h4>Penyakit Lambung</h4>
+                <h4>{{ $disease->kualifikasi }}</h4>
                 <p>Tingkat Bahaya</p>
-                <h4>Sedang</h4>
+                <h4>{{ $disease->tingkat_bahaya }}</h4>
               </div>
               <div class="description-penyakit">
-                <h4>Penyakit Lambung</h4>
-                <p><i>gastroesophageal reflux disease (GERD)</i></p>
+                <h4>{{ $disease->nama }}</h4>
+                <p><i>{{ $disease->nama_medis }}</i></p>
                 <p>
-                  Lambung terletak di sisi kiri perut bagian atas dan ukurannya bisa berbeda pada tiap orang. Pada bagian atas, lambung tersambung dengan kerongkongan, sedangkan bagian bawah lambung tersambung langsung dengan salah satu
-                  bagian usus halus, yaitu usus dua belas jari.
+                  {{ $disease->pengertian }}
                 </p>
               </div>
             </div>
@@ -77,9 +55,10 @@
                     </label>
                     <div class="acc-content">
                       <p>
-                        Sebuah penyakit pencernaan yang mana asam lambung atau empedu mengiritasi lapisan dalam saluran makanan. Ini adalah penyakit kronis yang terjadi saat asam lambung atau empedu mengalir ke saluran makanan dan
+                        {{ $disease->penjelasan }}
+                        {{-- Sebuah penyakit pencernaan yang mana asam lambung atau empedu mengiritasi lapisan dalam saluran makanan. Ini adalah penyakit kronis yang terjadi saat asam lambung atau empedu mengalir ke saluran makanan dan
                         mengiritasi dinding dalamnya. Refluks asam dan heartburn (asam lambung naik) lebih dari dua kali seminggu dapat mengindikasikan GERD. Gejalanya meliputi nyeri panas di dada yang biasanya terjadi setelah makan dan
-                        memburuk ketika berbaring.
+                        memburuk ketika berbaring. --}}
                       </p>
                     </div>
                   </div>
@@ -96,9 +75,11 @@
                     </label>
                     <div class="acc-content">
                       <p>
-                        Salah satu aktivitas yang tidak kita sadari dapat menjadi penyebab asam lambung naik yaitu pola makan tidak teratur, khususnya di malam hari. Hal ini disebabkan karena setelah makan, Anda tidak menyediakan cukup
+                        {{ $disease->penyebab }}
+
+                        {{-- Salah satu aktivitas yang tidak kita sadari dapat menjadi penyebab asam lambung naik yaitu pola makan tidak teratur, khususnya di malam hari. Hal ini disebabkan karena setelah makan, Anda tidak menyediakan cukup
                         waktu untuk tubuh mencerna makanan dengan langsung tidur.Oleh sebab itu, untuk mengatasi asam lambung yang naik, sebaiknya hindari makan dua jam sebelum tidur. Selain itu, makanlah secara teratur agar lambung dapat
-                        bekerja dengan baik untuk mencerna makanan yang dikonsumsi sesuai waktunya.
+                        bekerja dengan baik untuk mencerna makanan yang dikonsumsi sesuai waktunya. --}}
                       </p>
                     </div>
                   </div>
@@ -115,9 +96,11 @@
                     </label>
                     <div class="acc-content">
                       <p>
-                        1. Antasida<br />2. H-2 receptor blockers<br />3. Proton pump inhibitors (PPI)<br />
+                        {{ $disease->obat }}
+
+                        {{-- 1. Antasida<br />2. H-2 receptor blockers<br />3. Proton pump inhibitors (PPI)<br />
                         4. H-2 receptor blockers dengan resep<br />
-                        5. Proton pump inhibitors (PPI) dengan resep <br />6. Obat penguat sfingter esofagus bagian bawah <br />7. Obat prokinetik <br />8. Antibiotik (obat asam lambung akibat infeksi bakteri)
+                        5. Proton pump inhibitors (PPI) dengan resep <br />6. Obat penguat sfingter esofagus bagian bawah <br />7. Obat prokinetik <br />8. Antibiotik (obat asam lambung akibat infeksi bakteri) --}}
                       </p>
                     </div>
                   </div>
