@@ -11,20 +11,18 @@ class PagesController extends Controller
 {
     public function index(Request $request)
     {
+        return view('/');
+    }
+
+    public function rumahsakits(Request $request)
+    {
         $hospital = $request->keyword;
         $hospitals = Hospital::where('nama', 'LIKE', '%' . $hospital . '%')
             ->orWhere('lokasi', 'LIKE',  '%' . $hospital . '%')
             ->orWhere('keahlian_penyakit', 'LIKE',  '%' . $hospital . '%')
+            ->latest()
             ->get();
-        return view('index', compact('hospitals'))->with('i', (request()));
-    }
-    public function cari()
-    {
-        # code...
-    }
-    public function rumahsakits()
-    {
-        $hospitals = Hospital::latest()->paginate(6);
+        // $hospitals = Hospital::latest()->paginate(6);
 
         return view('/rumahsakits', compact('hospitals'))
             ->with('i', (request()->input('page', 1) - 1) * 6);
