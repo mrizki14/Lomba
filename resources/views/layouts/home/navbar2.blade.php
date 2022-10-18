@@ -12,9 +12,9 @@
         <ul class="top-menu navbar-nav ms-auto">
             <li><a class="nav-link mx-3 {{ Request::is('/') ? 'active' : '' }} " aria-current="page" href="/">Beranda</a></li>
             <li><a class="nav-link mx-3 {{ Request::is('rumahsakit') ? 'active' : '' }} " href="/rumahsakit">Rumah Sakit</a></li>
-          <li><a class="nav-link mx-3 {{ Request::is('penyakits') ? 'active' : '' }}" href="{{ url ('/penyakit') }}">Penyakit</a></li>
-          <li><a class="nav-link mx-3 {{ Request::is('tentang') ? 'active' : '' }}" href="{{ url ('/tentang') }}">Tentang</a></li>
-          <li>
+            <li><a class="nav-link mx-3 {{ Request::is('penyakits') ? 'active' : '' }}" href="{{ url ('/penyakit') }}">Penyakit</a></li>
+            <li><a class="nav-link mx-3 {{ Request::is('tentang') ? 'active' : '' }}" href="{{ url ('/tentang') }}">Tentang</a></li>
+            <li>
             @guest            
             <a class="nav-link mx-3 login" href="{{ url ('/login') }}">Masuk <img src="{{ asset('assets/image/icon/icon-login.svg')}}" alt="icon-login" /></a>
             @endguest

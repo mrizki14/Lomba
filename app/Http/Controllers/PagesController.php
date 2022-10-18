@@ -18,9 +18,12 @@ class PagesController extends Controller
             ->get();
         return view('index', compact('hospitals'))->with('i', (request()));
     }
+    public function cari()
+    {
+        # code...
+    }
     public function rumahsakits()
     {
-
         $hospitals = Hospital::latest()->paginate(6);
 
         return view('/rumahsakits', compact('hospitals'))
