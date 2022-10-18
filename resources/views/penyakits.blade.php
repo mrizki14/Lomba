@@ -68,7 +68,7 @@
               <p class="nm-disease mb-2">Nama Penyakit</p>
               <form action="" method="get">
                 <div class="d-flex mb-4">
-                  <input class="form-control input-search" name="penyakit" type="search" placeholder="Cari" aria-label="default input example" />
+                  <input class="form-control input-search" name="penyakit" type="search" placeholder="Cari" aria-label="default input example" value="{{ request('penyakit') }}" />
                   <button class="btn button-search" type="submit"><img src="{{ asset('assets/image/icon/icon-search.svg') }}" alt="" /></button>
                 </div>    
               </form>    

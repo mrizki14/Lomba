@@ -24,7 +24,7 @@
           <div class="row">
             <div class="col-6 ps-5 title-penyakit">
               <div class="content-penyakit">
-                <img src="{{ asset('assets/image/penyakit/img-asam-lambung.jpg')}}" alt="" />
+                <img src="{{ asset('imagesDiseases/' .$disease->image_path ) }}" alt="" />
                 <p>Nama Penyakit</p>
                 <h4>{{ $disease->nama }}</h4>
                 <p>Kualifikasi</p>
@@ -117,9 +117,10 @@
                     </label>
                     <div class="acc-content">
                       <p>
-                        Sebuah penyakit pencernaan yang mana asam lambung atau empedu mengiritasi lapisan dalam saluran makanan. Ini adalah penyakit kronis yang terjadi saat asam lambung atau empedu mengalir ke saluran makanan dan
+                        {{ $disease->saran_hospital }}
+                        {{-- Sebuah penyakit pencernaan yang mana asam lambung atau empedu mengiritasi lapisan dalam saluran makanan. Ini adalah penyakit kronis yang terjadi saat asam lambung atau empedu mengalir ke saluran makanan dan
                         mengiritasi dinding dalamnya. Refluks asam dan heartburn (asam lambung naik) lebih dari dua kali seminggu dapat mengindikasikan GERD. Gejalanya meliputi nyeri panas di dada yang biasanya terjadi setelah makan dan
-                        memburuk ketika berbaring.
+                        memburuk ketika berbaring. --}}
                       </p>
                     </div>
                   </div>

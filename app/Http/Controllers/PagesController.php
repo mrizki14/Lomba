@@ -11,12 +11,16 @@ class PagesController extends Controller
 {
     public function index(Request $request)
     {
-        // $keyword = $request->keyword;
-        // dd($keyword);
-        return view('/index');
+        $hospital = $request->keyword;
+        $hospitals = Hospital::where('nama', 'LIKE', '%' . $hospital . '%')
+            ->orWhere('lokasi', 'LIKE',  '%' . $hospital . '%')
+            ->orWhere('keahlian_penyakit', 'LIKE',  '%' . $hospital . '%')
+            ->get();
+        return view('index', compact('hospitals'))->with('i', (request()));
     }
     public function rumahsakits()
     {
+
         $hospitals = Hospital::latest()->paginate(6);
 
         return view('/rumahsakits', compact('hospitals'))

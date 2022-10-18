@@ -20,7 +20,7 @@
             <div class="bg-login col-sm-6">
               <img src="{{ asset('assets/image/login.png') }}" />
             </div>
-            <div class="form-login col-sm-6">
+            <div class="form-login col-sm-6 pt-5">
               <div class="form-isi w-50">
                 <div class="welcome">
                   <h2>Selamat Datang, <br /><span class="line-kuning"></span>HisCARES !</h2>
@@ -34,17 +34,8 @@
                       <span class="input-group-text p-2 border-0" id="password"><i class="bi bi-lock-fill"></i></i></span>
                       <input type="password" class="form-control border-0 p-2" placeholder="Masukan Kata Sandi" aria-label="Belajar mewarnai" aria-describedby="password" name="password" />
                     </div>
-                    <div class="mb-3 form-check text-end">
-                      <label class="form-check-label text-decoration-none" for="exampleCheck1"><a href="#">Lupa Kata Sandi</a></label>
-                    </div>
-                    <button type="submit" value="save" class="btn btn-primary w-100">Masuk</button>
-                    <p class="mt-4 text-center"><span>Atau Masuk Menggunakan</span></p>
-                    <div class="another-login">
-                      <button class="btn bg-white mx-2"><i class="bi bi-instagram"></i></button>
-                      <button class="btn bg-white mx-2"><i class="bi bi-google"></i></button>
-                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Masuk</button>
                   </div>
-                  <p class="text-center mt-3">Belum punya akun ? <a href="/register">Daftar Sekarang</a></p>
                 </div>
               </div>
             </div>

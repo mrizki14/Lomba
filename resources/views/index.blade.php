@@ -39,10 +39,10 @@
               <h2>Buat Hidup Lebih Sehat</h2>
               <h1>MENJAGA<span> KESEHATAN</span> BISA MUDAH DENGAN APLIKASI ONLINE</h1>
               <p>Telusuri lebih lanjut untuk mengetahui berbagai macam informasi seputar dunia kesehatan kondisi kesehatan. </p>
-              <form action="" method="get">
+              <form action="/rumahsakit" method="get">
                 <div class="input-group mb-3">
-                  <input type="search" class="form-control text-light" id="form-control" name="keyword" placeholder="Cek Informasi Anda Disini ..." aria-label="Check your information here" aria-describedby="button-addon2" />
-                  <button class="btn-jumbotron" type="submit" id="button-addon2"><i class="bi bi-search"></i></button>
+                  <input type="search" class="form-control text-light" name="keyword" placeholder="Cek Informasi Anda Disini ..." />
+                  <button class="btn-jumbotron" type="submit"><i class="bi bi-search"></i></button>
                 </div>
               </form>
               <!-- JUMBOTRON VALUE -->

@@ -65,6 +65,12 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 mb-3">
                 <div class="form-group">
+                    <strong>Saran Rumah Sakit</strong>
+                    <input type="text" name="saran_hospital" class="form-control" placeholder="Masukan Saran Rumah Sakit">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 mb-3">
+                <div class="form-group">
                     <strong>Gambar Penyakit</strong>
                     <input type="file" name="image" class="form-control" placeholder="Masukan gambar untuk mengetahui Penyakit">
                 </div>

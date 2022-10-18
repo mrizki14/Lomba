@@ -6,6 +6,7 @@
         <li class="nav-item ">
             <form action="/logout" method="POST">
                 @csrf
+                
                 <button type="submit" class="btn">Logout</button>
             </form>
         </li>

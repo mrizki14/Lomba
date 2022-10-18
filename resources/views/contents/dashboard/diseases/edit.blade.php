@@ -64,6 +64,12 @@
                         <input type="text" name="obat" class="form-control" value="{{ $disease->obat }}" placeholder="Masukan Obat untunk menyembuhkan Penyakit">
                     </div>
                 </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 mb-3">
+                    <div class="form-group">
+                        <strong>Saran Rumah Sakit</strong>
+                        <input type="text" name="saran_hospital" class="form-control" value="{{ $disease->saran_hospital }}" placeholder="Masukan Obat untunk menyembuhkan Penyakit">
+                    </div>
+                </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Pengertian Organ</strong>

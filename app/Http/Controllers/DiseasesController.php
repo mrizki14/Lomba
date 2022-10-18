@@ -46,6 +46,7 @@ class DiseasesController extends Controller
             'penjelasan' => 'required',
             'penyebab' => 'required',
             'obat' => 'required',
+            'saran_hospital' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
         ]);
 
@@ -64,6 +65,7 @@ class DiseasesController extends Controller
             'penjelasan' => $request->input('penjelasan'),
             'penyebab' => $request->input('penyebab'),
             'obat' => $request->input('obat'),
+            'saran_hospital' => $request->input('saran_hospital'),
             'image_path' => $imagesDiseases,
         ]);
 
@@ -111,6 +113,7 @@ class DiseasesController extends Controller
             'penjelasan' => 'required',
             'penyebab' => 'required',
             'obat' => 'required',
+
 
         ]);
 
