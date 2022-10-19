@@ -27,8 +27,8 @@ class GaleryController extends Controller
         //         ]);
         //     }
         // }
-
-        return view('contents.dashboard.hospitals.imageGalery')
+        $hospital = Hospital::all();
+        return view('rumahsakit')
             ->with('success', 'Product created successfully.');
     }
 

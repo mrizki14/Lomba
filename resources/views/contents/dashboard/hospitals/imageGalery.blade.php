@@ -26,7 +26,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12 mb-3">
             <div class="form-group">
                 <strong>Gambar Rumah Sakit</strong>
-                <input type="file" name="image_url" class="form-control mt-3" multiple placeholder="Masukan Lokasi Rumah Sakit">
+                <option value="{{ $value->id }}"></option>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center my-3">
