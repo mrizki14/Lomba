@@ -17,15 +17,17 @@
       <div class="container-fluid">
         <div class="section-login">
           <div class="row">
-            <div class="bg-login col-sm-6">
+            <div class="bg-login col-md-6">
+              <a class="back-home {{ Request::is('/') ? 'active' : '' }}" href="/"><i class="bi bi-arrow-left"></i>
+              </a>
               <img src="{{ asset('assets/image/login.png') }}" />
             </div>
-            <div class="form-login col-sm-6 pt-5">
-              <div class="form-isi w-50">
+            <div class="form-login col-md-6">
+              <div class="form-isi">
                 <div class="welcome">
-                  <h2>Selamat Datang, <br /><span class="line-kuning"></span>HisCARES !</h2>
+                  <h2>Selamat Datang, <br /><span class="line-kuning"></span>His<span>CARE</span> !</h2>
                   <p class="mt-3">Masuk untuk mengetahui<br />kondisimu.</p>
-                  <div class="mt-5 form-content">
+                  <div class="form-content pb-5">
                     <div class="input-group mb-3 shadow-sm">
                       <span class="input-group-text p-2 border-0" id="email"><i class="bi bi-person-fill"></i></span>
                       <input type="text" name="email" class="form-control border-0 p-2" placeholder="Masukan Email" aria-label="Belajar mewarnai" aria-describedby="name" />
@@ -34,9 +36,11 @@
                       <span class="input-group-text p-2 border-0" id="password"><i class="bi bi-lock-fill"></i></i></span>
                       <input type="password" class="form-control border-0 p-2" placeholder="Masukan Kata Sandi" aria-label="Belajar mewarnai" aria-describedby="password" name="password" />
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Masuk</button>
-                    
-                  </div>
+                    <div class="mb-3 form-check text-end">
+                      <label class="form-check-label text-decoration-none" for="exampleCheck1"><a href="#">Lupa Kata Sandi</a></label>
+                    </div>
+                    <button type="submit" value="save" class="btn btn-primary w-100">Masuk</button>
+                  
                 </div>
               </div>
             </div>
