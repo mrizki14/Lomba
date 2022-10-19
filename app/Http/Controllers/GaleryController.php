@@ -32,22 +32,34 @@ class GaleryController extends Controller
             ->with('success', 'Product created successfully.');
     }
 
+    public function tambahGalery($id) {
+        return view('contents.dashboard.hospitals.imageGalery', compact('id'));
+    }
+
     public function store(Request $request)
     {
         // $hospital = Hospital::get();
 
+        if ($request->file('file')) {
+            $filename = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $request->file('file')->getClientOriginalName());
+            $request->file('file')->move('imagesGalery', $filename);
+            $request->request->add(['image' => $filename]);
+        }
+
         $request->validate([
             'image_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
+
         ]);
 
-        $imagesHospitals = time() . '-' .  $request->nama . '-' .
+        $imagesHospitals = time() . '-' .  $request->hospital_id . '-' .
             $request->image_url->extension();
 
         $request->image_url->move(public_path('imagesGalery'), $imagesHospitals);
 
         Galery::create([
 
-            'image_url' => $imagesHospitals
+            'image_url' => $imagesHospitals,
+            'hospital_id' => $request->hospital_id
         ]);
 
         return redirect()->route('hospitals.index')

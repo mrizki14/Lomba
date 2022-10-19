@@ -27,14 +27,17 @@
                 <h5>{{ $hospital->nama }}</h5>
               </div>
               <div class="header-img-1">
-                <img src="{{ asset('assets/image/Hospitals/Hospital-1.png')}}" class="img-header-1" alt="" />
+                <img src="{{ asset('imagesHospitals/'.$hospital->image_path )}}" class="img-header-1" alt="" />
               </div>
             </div>
             <div class="col-sm-12 col-md-3 col-lg-3">
               <div class="header-img-2">
-                <img src="{{ asset('assets/image/Hospitals/img-popular-2.png')}}" class="img-header-2" alt="" />
-                <img src="{{ asset('assets/image/Hospitals/hospital-header-3.png')}}" class="img-header-3" alt="" />
-                <img src="{{ asset('assets/image/Hospitals/img-header-4.png')}}" class="img-header-4" alt="" />
+                <?php $count = 0; ?>
+                @foreach ($hospital->galery()->get() as $g)
+                    <?php if($count == 3) break; ?>
+                    <img src="{{ asset('imagesGalery/'.$g->image_url )}}" class="img-header-1" alt="" />
+                    <?php $count++; ?>
+                @endforeach
               </div>
             </div>
             <div class="col-lg-4">
@@ -205,24 +208,22 @@
         <h5>Galeri Rumah Sakit</h5>
         <div class="row">
           <div class="col-3 galeri-1">
-            @foreach ($galleries as $galery)
-            <img src="{{ asset('imagesHospitals/'.$galery->image_url )}}" alt="">
-            <img src="{{ asset('assets/image/Hospitals/galeri-2.png')}}" alt="">
-          </div>
-          @endforeach
-          
+            @foreach ($hospital->galery()->get() as $galery)
+            <img src="{{ asset('imagesGalery/'.$galery->image_url )}}" alt="">
+          </div>          
           <div class="col-3 galeri-2 ">
-            <img src="{{ asset('assets/image/Hospitals/galeri-3.png')}}" alt="">
-            <img src="{{ asset('assets/image/Hospitals/galeri-4.png')}}" alt="">
+            <img src="{{ asset('imagesGalery/'.$galery->image_url )}}" alt="">
+            <img src="{{ asset('imagesGalery/'.$galery->image_url )}}" alt="">
           </div>
           <div class="col-3 galeri-3 ">
-            <img src="{{ asset('assets/image/Hospitals/galeri-5.png')}}" alt="">
-            <img src="{{ asset('assets/image/Hospitals/galeri-6.png')}}" alt="">
+            <img src="{{ asset('imagesGalery/'.$galery->image_url )}}" alt="">
+            <img src="{{ asset('imagesGalery/'.$galery->image_url )}}" alt="">
           </div>
           <div class="col-3 galeri-4">
-            <img src="{{ asset('assets/image/Hospitals/galeri-7.png')}}" alt="">
-            <img src="{{ asset('assets/image/Hospitals/galeri-8.png')}}" alt="">
+            <img src="{{ asset('imagesGalery/'.$galery->image_url )}}" alt="">
+            <img src="{{ asset('imagesGalery/'.$galery->image_url )}}" alt="">
           </div>
+          @endforeach
         </div>
         <a class="back-menu" href="/rumahsakit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
