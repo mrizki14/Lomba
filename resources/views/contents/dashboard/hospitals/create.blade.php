@@ -75,8 +75,14 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 mb-3">
                 <div class="form-group">
-                    <strong>Gambar Rumah Sakit</strong>
+                    <strong>Thumbnail Rumah Sakit</strong>
                     <input type="file" name="image" class="form-control" placeholder="Masukan Lokasi Rumah Sakit">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 mb-3">
+                <div class="form-group">
+                    <strong>Galeri Rumah Sakit</strong>
+                    <input type="file" name="galeri" class="form-control" placeholder="Masukan Lokasi Rumah Sakit" multiple>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center mt-3">
