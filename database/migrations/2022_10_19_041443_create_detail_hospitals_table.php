@@ -13,8 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('hospitals', function (Blueprint $table) {
-            $table->foreign('hospital_id')->references('id')->on('galleries');
+        Schema::create('detail_hospitals', function (Blueprint $table) {
+            $table->id();
+            $table->string('type');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('galleries', function (Blueprint $table) {
-            $table->dropColumn('hospital_id');
-        });
+        Schema::dropIfExists('detail_hospitals');
     }
 };

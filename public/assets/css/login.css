@@ -29,16 +29,15 @@ body {
 
 .form-login {
   display: flex;
-  justify-content: center;
   background-image: url(../images/bg-form.png);
   background-size: 100% 100%;
-  padding: unset;
 }
 
 .form-isi {
   display: flex;
   justify-content: center;
-  margin-top: 65px;
+  margin-top: 100px;
+  width: 100%;
 }
 
 .form-login h2 {
@@ -48,12 +47,19 @@ body {
 }
 
 .form-login p {
-  font-family: "Noto sans";
+  font-family: "Poppins";
   color: #121212;
   font-size: 20px;
   opacity: calc(70%);
 }
-
+@media only screen and (max-width: 620px) {
+  .bg-login img {
+    display: none;
+  }
+  .form-login p {
+    font-size: 18px;
+  }
+}
 .form-isi .form-check a {
   text-decoration: none;
   color: #121212;
@@ -74,7 +80,9 @@ body {
   border-radius: 10px;
   background-color: #e9eff6;
 }
-
+.form-content {
+  margin-top: 5rem;
+}
 .form-content span {
   background-color: #e9eff6 !important;
 }
@@ -112,9 +120,27 @@ body {
   width: 40px;
   height: 40px;
 }
-.bi-instagram {
-  color: #fd1d1d;
+.back-home {
+  position: fixed;
+  bottom: 0;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
 }
-.bi-google {
-  color: #e23a2e;
+.back-home i {
+  font-size: 30px;
+  color: var(--third-color);
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 0 8px;
+}
+@media only screen and (min-width: 1450px) {
+  .form-login h2 {
+    font-size: 45px;
+  }
+  .welcome {
+    width: 70%;
+  }
+  .form-content {
+    width: 70%;
+  }
 }

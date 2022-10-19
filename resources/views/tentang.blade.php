@@ -22,11 +22,11 @@
     @include('layouts.home.navbar2')
 
     
-  <main class="content pt-5">
+  <main class="content">
       <div class="section-about-us pb-5 " id="section-about-us">
           <div id="about-us-1">
               <div class="container">
-
+              <div class="content-about">
                           <h1 class="title-main mt-5">
                               Tentang Kami
                           </h1>
@@ -60,6 +60,7 @@
                               </div>
                           
               </div>
+              </div>
           </div>
 
           <div id="about-us-2">
@@ -91,21 +92,7 @@
                                           <a href="#" class="text-decoration-none me-3"><i class="fab fa-instagram"></i></a>
                                       </div>
                                   </div>
-                              </div>
-                          </div>
 
-                          <h2 class="title mt-5">
-                              Pengembang HisCARE
-                          </h2>
-                          <div class="contact-us row mb-5">
-                              <div class="col-md-12 mt-3">
-                                  <span>
-                                      <i class="fas fa-circle-check"></i> Hubungi Kami Lewat Instagram
-                                      <br>
-                                      <a href="https://www.instagram.com/not_raii4f/?hl=id"> <i class="bi bi-instagram">@not_raii4f </i> </a>
-                                      <br>
-                                      <a href="https://www.instagram.com/yrizki_/?hl=id"> <i class="bi bi-instagram">@yrizki_ </i></a>
-                                  </span>
                               </div>
                           </div>
 
@@ -114,6 +101,9 @@
               </div>
           </div>
       </div>
+
+      @include('layouts.home.footer')
+
     <script src="/assets/js/bootstrap.bundle.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>

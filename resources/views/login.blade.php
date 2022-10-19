@@ -35,6 +35,7 @@
                       <input type="password" class="form-control border-0 p-2" placeholder="Masukan Kata Sandi" aria-label="Belajar mewarnai" aria-describedby="password" name="password" />
                     </div>
                     <button type="submit" class="btn btn-primary w-100">Masuk</button>
+                    
                   </div>
                 </div>
               </div>

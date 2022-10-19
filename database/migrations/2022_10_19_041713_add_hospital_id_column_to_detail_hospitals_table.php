@@ -13,10 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('galleries', function (Blueprint $table) {
-            $table->id();
-            $table->string('image');
-            $table->timestamps();
+        Schema::table('detail_hospitals', function (Blueprint $table) {
+            $table->foreignId('hospital_id')->constrained('hospitals')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
@@ -27,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('galleries');
+        Schema::table('detail_hospitals', function (Blueprint $table) {
+            //
+        });
     }
 };

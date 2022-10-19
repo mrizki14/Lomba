@@ -17,7 +17,7 @@
           </div>
           <div class="col-12 col-lg-8 main-footer">
             <div class="row">
-              <div class="col-12 col-lg-3">
+              <div class="col-6 col-md-3">
                 <p class="perusahaan">Extra Pages</p>
                 <ul>
                   <li><a href="#">Doctor</a></li>
@@ -26,7 +26,7 @@
                   <li><a href="#">Term & Condition</a></li>
                 </ul>
               </div>
-              <div class="col-12 col-lg-3">
+              <div class="col-6 col-md-3">
                 <p>Our Links</p>
                 <ul>
                   <li><a href="#"> Work with us</a></li>
@@ -35,7 +35,7 @@
                   <li><a href="#">Hopital</a></li>
                 </ul>
               </div>
-              <div class="col-12 col-lg-6">
+              <div class="col-12 col-md-6">
                 <p>Our Location</p>
                 <ul>
                   <iframe
@@ -52,7 +52,7 @@
             </div>
           </div>
         </div>
-        <div class="copyright text-center">
+        <div class="copyright pt-5 pb-4">
           <p>Copyright <img src="{{ asset('assets/image/icon/copyright.svg')}}" /> HisCARE 2022 All Right Reserved</p>
         </div>
       </div>

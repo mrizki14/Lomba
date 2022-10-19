@@ -10,10 +10,10 @@ class Hospital extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nama', 'lokasi', 'image_path', 'deskripsi', 'keahlian_penyakit', 'obat_penyakit', 'rincian_penanganan', 'fasilitas', 'dukungan', 'review_id', 'image',
+        'nama', 'lokasi', 'image_path', 'deskripsi', 'keahlian_penyakit', 'obat_penyakit', 'rincian_penanganan', 'fasilitas', 'dukungan', 'review_id',
     ];
     public function galery()
     {
-        return $this->hasOne(Galery::class, 'hospital_id');
+        return $this->hasMany(Galery::class, 'hospital_id', 'id');
     }
 }

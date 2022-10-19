@@ -12,7 +12,7 @@
     <link href="{{ asset('assets/css/owl.carousel.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/css/owl.theme.default.min.css') }}" rel="stylesheet" />
     <!-- LOGO -->
-    <link rel="icon" href="/assets/image/brand-1.png" />  
+    <link rel="icon" href="/assets/image/brand-2.png" />  
     <!-- STYLE CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/hospitals.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/aos.css') }}" />
@@ -24,7 +24,7 @@
     <header>
       <div class="container">
         <div class="jumbotron">
-          <p>hidup ini terlalu singkat untuk dunia yang luas dan indah</p>
+          <p>Hidup ini terlalu singkat untuk dunia yang luas dan indah</p>
           <h1>Cari Pelayanan Rumah Sakit yang nyaman dan Terjangkau untukmu disini</h1>
         </div>
       </div>
@@ -50,7 +50,7 @@
                   <img src="{{ asset('assets/image/Hospitals/img-popular-2.png')}}" alt="" />
                 </div>
                 <div class="img-populer-3">
-                  <a href="#"><img src="{{ asset('assets/image/Hospitals/img-popular-3.png')}}" class="img-popular-3" alt="" /></a>
+                  <a href="#"><img src="{{ asset('assets/image/Hospitals/galeri-5.png')}}" class="img-popular-3" alt="" /></a>
                 </div>
               </div>
               <div class="col-lg-6 col-sm-2">
@@ -108,7 +108,7 @@
             <div class="row">
               @foreach ($hospitals as $d) 
               <div class="col-lg-4 col-sm-12">
-                <div class="hospital-1" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="hospital-1">
                   <div class="card card-hospital">
                     <img src="{{ asset('imagesHospitals/' .$d->image_path)}}" class="img-hospital-1" alt="" />
                     <div class="card-body-hospital">

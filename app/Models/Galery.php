@@ -8,10 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Galery extends Model
 {
     use HasFactory;
-    protected $fillable = ['image'];
-
-    public function hospitals()
-    {
-        return $this->belongsTo('App\Models\Hospital');
-    }
+    protected $table = 'galleries';
+    protected $guarded = ['id'];
 }

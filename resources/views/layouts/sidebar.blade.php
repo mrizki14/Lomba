@@ -28,6 +28,11 @@
                     <i class="align-middle" data-feather="percent"></i> <span
                         class="align-middle">Hospitals</span>
                 </a>
+                <a class="sidebar-link" href="{{ url('/add-galery') }}">
+                    <i class="align-middle" data-feather="percent"></i> <span
+                        class="align-middle">Image Hospitals</span>
+                </a>
+
             </li>
         </ul>
     </div>

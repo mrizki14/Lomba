@@ -7,114 +7,363 @@
   --third-color: #3282b8;
   --fourth-color: #bbe1fa;
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
+  outline: none;
+}
+body {
+  overflow-x: hidden !important;
   font-family: "Poppins", sans-serif;
+}
+ol,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+::-moz-selection {
+  text-shadow: none;
+  color: #fff;
+  background: var(--second-color);
+}
+::selection {
+  text-shadow: none;
+  color: #fff;
+  background: var(--second-color);
+}
+iframe {
+  max-width: 100%;
+  border-radius: 15px;
+}
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none !important;
+  box-shadow: none;
+}
+button,
+button[type="submit"],
+input[type="submit"] {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.btn,
+.btn:hover,
+.btn:focus,
+.btn:active {
+  box-shadow: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+.card {
+  border: none;
 }
 
 /* !NAVBAR */
-
-.navbar-brand {
+.navbar-brand-1 {
   font-size: 26px;
   line-height: 54px;
   color: var(--fourth-color) !important;
   padding-left: 20px;
 }
-.navbar-brand img {
+.navbar-brand-2 {
+  font-size: 26px;
+  line-height: 54px;
+  color: var(--second-color) !important;
+  padding-left: 20px;
+}
+.navbar-brand-1 img,
+.navbar-brand-2 img {
   width: 50px;
   margin-bottom: 15px;
 }
-.navbar-brand span {
+.navbar-brand-1 span,
+.navbar-brand-2 span {
   margin-left: 15px;
 }
-.navbar-brand b {
+.navbar-brand-1 b {
   color: var(--fourth-color);
   font-weight: bolder;
 }
-
-.active {
+.navbar-brand-2 b {
+  color: var(--second-color);
+  font-weight: bolder;
+}
+.active-1 {
   color: var(--fourth-color) !important;
+}
+.active-2 {
+  color: var(--second-color) !important;
 }
 .nav-color {
   background-color: var(--second-color);
   transition: all ease-in-out 0.5s;
   box-shadow: 0px 4px 20px #38383889;
 }
-
-.bg-transparent {
+.nav-color-2 {
+  background-color: #eaeaea;
+  transition: all ease-in-out 0.5s;
+  box-shadow: 0px 4px 20px #38383889;
+}
+.bg-transparent,
+.bg-transparent-2 {
   transition: all ease-in 0.5s;
 }
-.nav-link {
-  font-size: 20px;
+.nav-link-1 {
+  font-size: 22px;
   color: rgba(187, 225, 250, 0.5);
 }
-.nav-link:hover,
-.nav-link:focus,
-.login {
+.nav-link-1:hover,
+.nav-link-1:focus,
+.login-1 {
   color: var(--fourth-color);
-  font-weight: 500;
 }
-.login img {
+.nav-link-2:hover,
+.nav-link-2:focus,
+.login-2 {
+  color: var(--second-color);
+}
+.login-1 {
+  color: var(--fourth-color);
+}
+.login-2 {
+  color: var(--second-color);
+}
+.login-1 img,
+.login-2 img {
   margin-left: 15px;
 }
-
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  height: 20px;
-  justify-content: space-between;
-  position: relative;
+@media only screen and (max-width: 620px) {
+  .navbar {
+    display: block;
+    width: 100%;
+    padding: 0 !important;
+    padding-top: 12px !important ;
+    padding-bottom: 10px !important ;
+    position: fixed;
+    z-index: 3;
+  }
+  .nav-color {
+    background-color: var(--second-color);
+    transition: all ease-in-out 0.5s;
+  }
+  .nav-color-2 {
+    background-color: #eaeaea;
+    transition: all ease-in-out 0.5s;
+  }
+  .bg-transparent {
+    transition: all ease-in 0.3s;
+  }
+  .nav-link-1,
+  .nav-link-2 {
+    padding: 20px 0px 20px 0px !important;
+  }
+  .nav-link-1 a,
+  .nav-link-2 a {
+    margin-top: 100px !important ;
+  }
+  .navbar-brand-1,
+  .navbar-brand-2 {
+    position: relative;
+    right: 35px;
+    top: 8px;
+  }
+  .navbar-brand-1 span,
+  .navbar-brand-2 span {
+    margin-left: 8px;
+  }
+  .navbar-links {
+    position: fixed;
+    top: -275px;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
 }
-.menu-toggle input {
-  position: absolute;
-  top: -5px;
-  width: 35px;
-  height: 40px;
-  opacity: 0;
-  cursor: pointer;
-  z-index: 4;
-}
-.menu-toggle span {
-  display: block;
-  width: 28px;
-  height: 3.5px;
-  border-radius: 50px;
-  background-color: var(--fourth-color);
-  transition: all 0.3s;
-  z-index: 3;
+@media only screen and (min-width: 1450px) {
+  .navbar {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  .nav-link-1,
+  .nav-link-2 {
+    font-size: 25px;
+    font-weight: 400;
+  }
 }
 
 /*HAMBURGER ANIMATION*/
-.menu-toggle span:nth-child(2) {
-  transform-origin: 0 0;
+.hamburger-menu {
+  width: max-content;
 }
-.menu-toggle span:nth-child(3) {
-  width: 50%;
-  margin-left: 12px;
+.sergap-off-canvas-social {
+  display: flex;
+  justify-content: space-evenly;
+  background: var(--second-color);
+  padding: 20px;
 }
-.menu-toggle span:nth-child(4) {
-  transform-origin: 0 100%;
+.sergap-off-canvas-social a i {
+  color: var(--fourth-color);
+  background-color: #d6d6d6;
+  padding: 10px;
+  border-radius: 50%;
+  width: fit-content;
+  height: 100%;
 }
-.menu-toggle input:checked ~ span:nth-child(2) {
-  background-color: var(--fourth-color);
-  transform: rotate(45deg) translate(-1px, -1px);
+.sergap-off-canvas-social a i:hover {
+  color: #fff;
 }
-.menu-toggle input:checked ~ span:nth-child(4) {
-  background-color: var(--fourth-color);
-  transform: rotate(-45deg) translate(-1px, 0);
+#menu__toggle {
+  opacity: 0;
 }
-.menu-toggle input:checked ~ span:nth-child(3) {
-  transform: scale(0);
+#menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg);
 }
+#menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+#menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  left: 0 !important;
+}
+.menu__btn {
+  display: none;
+  position: fixed;
+  top: 50px;
+  right: 0px;
+  margin-right: 30px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+@media only screen and (max-width: 620px) {
+  .menu__btn {
+    top: 45px;
+    display: block;
+  }
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #3b9ada;
+  transition-duration: 0.25s;
+}
+@media only screen and (max-width: 620px) {
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+  }
+}
+.menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+.menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 400px;
+  height: 100%;
+  margin: 0;
+  padding: 20px 0;
+  list-style: none;
+  background-color: var(--second-color);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  transition-duration: 0.25s;
+}
+@media only screen and (max-width: 479px) {
+  .menu__box {
+    width: 100vw;
+  }
+}
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #d9d9d9;
+  border-top: 1px solid #fff;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  transition-duration: 0.25s;
+}
+.menu__item:hover {
+  background-color: #3989beb4;
+  color: #fff;
+}
+.logo-off-canvas {
+  display: flex;
+  padding: 0px 20px;
+  margin-left: 30px;
+}
+.logo-off-canvas img {
+  width: 50px;
+  height: auto;
+  margin-bottom: 1em;
+}
+.logo-off-canvas h4 {
+  font-size: 22px;
+  margin-top: 0.5em;
+  color: var(--fourth-color);
+}
+@media only screen and (max-width: 479px) {
+  .logo-off-canvas h4 {
+    font-size: 30px;
+  }
+  .logo-off-canvas img {
+    width: 18%;
+    height: auto;
+  }
+}
+
 header {
   background: url(/assets/image/bg-hospitals.png);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: 100vh;
+}
+@media only screen and (max-width: 620px) {
+  header {
+    height: 80vh;
+  }
 }
 /* !JUMBOTRON */
 .jumbotron {
@@ -126,20 +375,61 @@ header {
   letter-spacing: 0.005em;
   color: rgba(254, 254, 254, 0.75);
   font-weight: 600;
-  font-size: 22px;
+  font-size: 24px;
   line-height: 33px;
 }
 .jumbotron h1 {
   color: #ffffff;
   font-weight: 700;
   font-size: 52px;
-  line-height: 78px;
+  line-height: 75px;
   width: 100%;
+  margin-top: 1rem;
+}
+@media only screen and (max-width: 620px) {
+  .jumbotron {
+    width: fit-content;
+    height: auto;
+    text-align: center;
+    text-transform: capitalize;
+    padding-top: 10rem;
+    position: absolute;
+    left: 0;
+  }
+  .jumbotron p {
+    letter-spacing: 0.005em;
+    color: rgba(254, 254, 254, 0.75);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+    width: 80%;
+    margin: 0;
+    margin-left: 2.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .jumbotron h1 {
+    width: auto;
+    font-size: 22px;
+    line-height: 31px;
+    padding: 10px 20px 10px 20px;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 1450px) {
+  .jumbotron p {
+    font-size: 28px;
+  }
 }
 /* !HOSPITAL SERVICE*/
 .popular-hospitals {
   background: linear-gradient(177.59deg, #c4c4c4 -1.41%, #ffffff -1.38%, #bbe1fa 277.26%);
   height: 100vh;
+}
+@media only screen and (max-width: 620px) {
+  .popular-hospitals {
+    height: 250vh;
+  }
 }
 .title-popular-hospitals {
   margin-top: 100px;
@@ -159,16 +449,22 @@ header {
 .main-populer-hospitals {
   padding-top: 80px;
 }
+@media only screen and (max-width: 767px) {
+  .main-populer-hospitals {
+    padding-top: 50px;
+  }
+}
 .img-populer-2 {
   margin-left: 20px;
   padding-bottom: 23px;
 }
 .img-popular-3 {
   margin-left: 20px;
+  border-radius: 21px;
+  width: 93%;
 }
 .text-populer-hospital {
   margin-left: 35px;
-  margin-top: 70px;
 }
 .text-populer-hospital p {
   font-size: 18px;
@@ -185,13 +481,36 @@ header {
   text-transform: capitalize;
   color: #232631;
 }
-p.detail-populer-hospitals {
+.detail-populer-hospitals {
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
   text-transform: capitalize;
   color: #848484;
   margin-left: 0 !important;
+}
+@media only screen and (max-width: 620px) {
+  .title-popular-hospitals {
+    margin-top: 35px;
+  }
+  .title-popular-hospitals h1 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .title-popular-hospitals h3 {
+    font-size: 18px;
+  }
+  .img-populer-1,
+  .img-populer-2,
+  .img-popular-3 {
+    margin: 0 1rem;
+  }
+  .img-popular-3 {
+    width: 89%;
+  }
+  .img-populer-2 {
+    margin-top: 1em;
+  }
 }
 .data-populer-hospitals {
   margin-left: 35px;
@@ -221,6 +540,10 @@ p.detail-populer-hospitals {
   font-size: 16px;
   line-height: 24px;
 }
+.btn-populer-hospitals-1,
+.btn-populer-hospitals-2 {
+  margin-top: 3rem;
+}
 .btn-populer-hospitals-1:focus,
 .btn-populer-hospitals-2:focus {
   box-shadow: none;
@@ -231,6 +554,42 @@ p.detail-populer-hospitals {
   font-size: 16px;
   line-height: 24px;
   margin-left: 50px;
+}
+@media only screen and (max-width: 620px) {
+  .text-populer-hospital {
+    margin-left: 20px;
+    margin-top: 2em;
+  }
+  .text-populer-hospital h2 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .text-populer-hospital h5 {
+    font-size: 16px;
+  }
+  .text-populer-hospital p {
+    font-size: 15px;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  .count-data-hospitals {
+    margin-bottom: 3em;
+  }
+  .data-populer-hospitals p {
+    line-height: 22px;
+    width: 100%;
+  }
+  .btn-populer-hospitals-1 {
+    margin-bottom: 1em;
+  }
+  .btn-populer-hospitals-1,
+  .btn-populer-hospitals-2 {
+    margin: 0px auto;
+    display: block;
+  }
+  .btn-populer-hospitals-2 {
+    margin-top: 1em;
+  }
 }
 /* !HOSPITAL SERVICE */
 
@@ -257,11 +616,12 @@ p.detail-populer-hospitals {
 .button-service-hospitals {
   text-align: center;
   background: #ffffff;
-  border-radius: 25px;
-  width: 30%;
+  border-radius: 50px;
+  width: fit-content;
   height: auto;
-  padding: 12px;
+  padding: 10px;
   margin: auto;
+  margin-top: 3em;
 }
 .button-service-hospitals-1 {
   background: #0c4b75;
@@ -284,14 +644,56 @@ p.detail-populer-hospitals {
   box-shadow: none;
   border-radius: 25px;
 }
-
+.button-service-hospitals-1,
+.button-service-hospitals-2,
+.button-service-hospitals-3 {
+  margin: 0 1em;
+}
 .button-service-hospitals-2,
 .button-service-hospitals-3 {
   color: #0c4b75;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
-  padding: 10px 12px 6px 12px;
+  padding: 6px 12px 6px 12px;
+}
+@media only screen and (max-width: 620px) {
+  .title-service-hospitals h3 {
+    font-size: 18px;
+  }
+  .title-service-hospitals h1 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .button-service-hospitals {
+    width: auto;
+    height: 50px;
+    padding-top: 3px;
+    margin-top: 30px;
+    box-shadow: 0px 3px 10px 2px rgba(141, 141, 141, 0.29);
+  }
+  .button-service-hospitals-1 {
+    border-radius: 35px;
+    font-size: 14px;
+    width: auto;
+    height: 43px;
+  }
+  .button-service-hospitals-2 {
+    border-radius: 35px;
+    font-size: 14px;
+    width: auto;
+  }
+  .button-service-hospitals-3 {
+    border-radius: 35px;
+    font-size: 14px;
+    width: auto;
+  }
+  .button-service-hospitals-1,
+  .button-service-hospitals-2,
+  .button-service-hospitals-3 {
+    margin: 0;
+    font-size: 16px;
+  }
 }
 /* !HOSPITAL */
 .product-hospital {
@@ -337,6 +739,24 @@ button:focus {
   padding: 1em 1em;
   align-items: center;
   margin-left: 0.5em;
+}
+@media only screen and (max-width: 620px) {
+  .product-hospital {
+    margin-top: 2rem;
+  }
+  .hospital-1,
+  .hospital-2,
+  .hospital-3,
+  .hospital-4,
+  .hospital-5,
+  .hospital-6 {
+    margin: 0px auto;
+  }
+
+  .img-hospital-1 {
+    width: 100%;
+    margin: 0;
+  }
 }
 .card-title-hospital {
   color: #232631;
@@ -390,6 +810,12 @@ button:focus {
   color: white;
   background: var(--second-color);
   border-radius: 25px;
+}
+@media only screen and (max-width: 767px) {
+  .button-service-hospitals-1 {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 /* ! IMAGES WORKS */
 .work-img {
@@ -529,7 +955,6 @@ button:focus {
 /* !FOOTER */
 .footer {
   width: 100%;
-  height: 550px;
   background-color: var(--second-color);
 }
 .content-footer {
@@ -537,7 +962,8 @@ button:focus {
 }
 
 .about-footer img {
-  padding-right: 25px;
+  padding-right: 10px;
+  margin-bottom: 15px;
 }
 .brand-footer {
   padding-bottom: 2rem;
@@ -551,28 +977,34 @@ button:focus {
   color: var(--fourth-color);
 }
 .text-footer {
-  margin-top: 30px;
+  margin-top: 15px;
   width: 90%;
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
-  text-align: justify;
 
   color: #ffffff;
 }
 .main-footer p {
   margin-top: 30px;
-  margin-left: 28px;
   padding-bottom: 15px;
   font-size: 20px;
   color: #ffffff;
   font-weight: 600;
 }
 .main-footer a {
-  color: white;
+  color: rgba(255, 255, 255, 0.836);
   font-size: 15px;
   line-height: 50px;
   text-decoration: none;
+}
+.main-footer a:hover {
+  color: #fff;
+}
+@media only screen and (min-width: 1450px) {
+  .main-footer a {
+    font-size: 17px;
+  }
 }
 .main-footer li {
   list-style: none;
@@ -588,388 +1020,6 @@ iframe {
 }
 
 /* !MOBILE */
-@media screen and (max-width: 620px) {
-  html,
-  body {
-    width: 100% !important;
-  }
-
-  /* !NAVBAR */
-  .navbar {
-    display: block;
-    width: 100%;
-    padding: 0 !important;
-    padding-top: 12px !important ;
-    padding-bottom: 10px !important ;
-    z-index: 3;
-    position: fixed;
-  }
-  .navbar-nav {
-    background: var(--second-color) !important;
-  }
-  .nav-color {
-    background-color: var(--second-color);
-    transition: all ease-in-out 0.3s;
-    color: black !important;
-  }
-  .bg-transparent {
-    transition: all ease-in 0.3s;
-  }
-  .nav-link {
-    padding: 20px 0px 20px 0px !important;
-  }
-  .nav-link a {
-    margin-top: 100px !important ;
-  }
-  .navbar-brand {
-    position: relative;
-    right: 35px;
-  }
-  .navbar-brand span {
-    margin-left: 8px;
-  }
-  .navbar-links {
-    position: fixed;
-    top: -275px;
-    left: 0;
-    width: 100%;
-    height: auto;
-  }
-  .menu-toggle {
-    display: flex;
-  }
-  .top-menu {
-    z-index: -1;
-  }
-  nav ul {
-    position: relative;
-    /* top: -140px;
-    left: -50px; */
-    width: 100%;
-    background: #fafafa;
-    align-items: center;
-    transform: translateY(0);
-    transition: all 0.5s;
-    opacity: 0;
-    border-radius: 0 0 10px 10px;
-  }
-
-  nav ul.slide {
-    display: flex;
-    transform: translateY(100%);
-    opacity: 1;
-  }
-  /* !HEADER */
-  header {
-    background-repeat: no-repeat;
-    background-size: auto;
-    height: 70vh;
-  }
-  /* !JUMBOTRON */
-  .jumbotron {
-    width: fit-content;
-    height: auto;
-    text-align: center;
-    text-transform: capitalize;
-    padding-top: 10rem;
-    position: absolute;
-    left: 0;
-  }
-  .jumbotron p {
-    letter-spacing: 0.005em;
-    color: rgba(254, 254, 254, 0.75);
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 30px;
-    width: 80%;
-    margin: 0;
-    margin-left: 2.5rem;
-    padding-bottom: 1.5rem;
-  }
-
-  .jumbotron h1 {
-    width: auto;
-    font-size: 22px;
-    line-height: 40px;
-    padding: 10px 20px 10px 20px;
-  }
-  /* !POPULER HOSPITALS */
-  .popular-hospitals {
-    display: block;
-    margin-bottom: 100px;
-    height: 100vh;
-    width: fit-content;
-  }
-  .title-popular-hospitals {
-    margin-top: 30px;
-  }
-  .title-popular-hospitals h3 {
-    font-size: 18px;
-  }
-  .title-popular-hospitals h1 {
-    font-size: 30px;
-    line-height: 45px;
-    margin: 0;
-  }
-  .img-populer-1,
-  .img-populer-2,
-  .img-popular-3 {
-    display: none;
-  }
-  .main-populer-hospitals {
-    padding: 0;
-  }
-  .text-populer-hospital {
-    margin-top: 30px;
-    margin-left: 0;
-    width: auto;
-    text-align: center;
-  }
-
-  .text-populer-hospital h5 {
-    font-size: 16px;
-    margin: auto;
-    margin-bottom: 20px;
-    color: #fff;
-    background-color: #0c4b75;
-    width: 70%;
-    padding: 10px 0px 10px 0px;
-    border-radius: 50px;
-    box-shadow: 0px 3px 18px 2px rgba(64, 63, 63, 0.5);
-  }
-  .text-populer-hospital h2 {
-    font-size: 26px;
-    line-height: 34px;
-    text-align: center;
-    margin-bottom: 12px;
-  }
-  .detail-populer-hospitals p {
-    font-size: 16px;
-    text-align: center;
-    width: auto;
-    margin: 0;
-  }
-  .title-popular-hospitals h1 {
-    width: 90%;
-    margin-left: 10px;
-  }
-  .data-populer-hospitals {
-    margin: auto;
-  }
-  .count-data-hospitals {
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding-bottom: 40px;
-  }
-  .data-populer-hospitals h5 {
-    width: auto;
-    font-size: 16px;
-  }
-  .data-populer-hospitals p {
-    font-size: 14px;
-    width: auto;
-    line-height: 18px;
-  }
-  .data-hospital-3 {
-    margin-top: 15px;
-  }
-  .detail-populer-hospitals a {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-  }
-  .btn-populer-hospitals-1 {
-    width: inherit;
-    height: auto;
-    padding: 11px 18px 11px 18px;
-    font-size: 12px;
-    line-height: 9px;
-    border-radius: 50px;
-  }
-  .btn-populer-hospitals-2 {
-    width: inherit;
-    height: auto;
-    margin-top: 1em !important;
-    font-size: 12px;
-    line-height: 14px;
-  }
-  /* !SERVICE HOSPITALS */
-  .hospital-service {
-    display: block;
-    width: auto;
-    height: auto;
-  }
-  .popular-hospitals {
-    margin-bottom: 0;
-  }
-  .title-service-hospitals h3 {
-    font-size: 18px;
-  }
-  .title-service-hospitals h1 {
-    font-size: 30px;
-    line-height: 45px;
-  }
-  .button-service-hospitals {
-    width: auto;
-    height: 50px;
-    padding-top: 3px;
-    margin-top: 30px;
-    box-shadow: 0px 3px 10px 2px rgba(141, 141, 141, 0.29);
-  }
-  .button-service-hospitals-1 {
-    border-radius: 18px;
-    font-size: 14px;
-    width: auto;
-    height: 43px;
-  }
-  .button-service-hospitals-2 {
-    border-radius: 18px;
-    font-size: 14px;
-    width: auto;
-  }
-  .button-service-hospitals-3 {
-    border-radius: 18px;
-    font-size: 14px;
-    width: auto;
-  }
-  /* !HOSPITALS */
-  .product-hospital {
-    margin-top: 2rem;
-  }
-  .hospital-1,
-  .hospital-2,
-  .hospital-3,
-  .hospital-4,
-  .hospital-5,
-  .hospital-6 {
-    margin-left: 3em;
-  }
-
-  .img-hospital-1 {
-    width: 100%;
-    margin: 0;
-  }
-  .btn-detail-hospitals {
-    padding-top: 20px;
-  }
-  .btn-detail-hospitals-1 {
-    font-size: 14px;
-    line-height: 24px;
-    width: 130px;
-  }
-  .btn-detail-hospitals-2 {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 24px;
-    margin-left: 3em;
-  }
-  /* !CUSTOMER SAYS */
-  .customer {
-    padding-right: 0;
-    padding-left: 50px;
-  }
-  .main-customer-say h2 {
-    font-size: 18px;
-  }
-  .main-customer-say h1 {
-    font-size: 30px;
-  }
-  .main-customer-say p {
-    font-size: 14px;
-  }
-  .img-card-customer-1 {
-    width: 100%;
-    height: auto;
-  }
-  .customer-1 {
-    margin-left: 6px;
-    margin-right: 10px;
-  }
-  .customer-2 {
-    margin-left: 10px;
-  }
-  .card-title-customer {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  .card-customer-say-1,
-  .card-customer-say-2 {
-    border-radius: 15px !important;
-    height: auto;
-  }
-  .title-customer-1 {
-    width: 100%;
-  }
-  .card-customer-say-1 {
-    width: 578px;
-    height: 300px !important;
-  }
-  .text-customer-say {
-    width: 100%;
-    font-size: 13px;
-    padding-top: 1em;
-  }
-  .card-customer-say-2 {
-    display: none;
-  }
-  /* !FOOTER */
-  .footer {
-    height: auto;
-  }
-  .brand-footer {
-    padding-bottom: 0;
-  }
-  .brand-footer h2 {
-    font-size: 30px;
-  }
-  .brand-footer span {
-    font-weight: 800;
-    color: var(--fourth-color);
-  }
-  .text-footer {
-    width: 90%;
-    font-size: 14px;
-  }
-  .content-footer {
-    margin-top: 50px;
-  }
-  .main-footer p {
-    padding-bottom: 15px;
-    margin-left: 0 !important;
-    margin-bottom: 0 !important;
-    font-size: 20px;
-    color: #ffffff;
-    font-weight: 600;
-  }
-  .perusahaan {
-    margin-top: 20px;
-  }
-  .main-footer a {
-    color: white;
-    font-size: 15px;
-    line-height: 50px;
-    text-decoration: none;
-  }
-  .main-footer li {
-    list-style: none;
-  }
-  .main-footer ul {
-    padding-left: 0 !important;
-  }
-  .copyright p {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 30px;
-    color: #ffffff;
-    margin-left: 30px;
-  }
-  .copyright {
-    padding-bottom: 2rem !important;
-  }
-}
 
 /* ?FULL HD */
 @media screen and (min-width: 1900px) {

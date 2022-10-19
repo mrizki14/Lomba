@@ -35,7 +35,7 @@
        
                         <a class="btn btn-info" href="{{ route('hospitals.show',$d->id) }}">Show</a>
                         <a class="btn btn-primary " href="{{ route('hospitals.edit',$d->id) }}">Edit</a>
-                        <a class="btn btn-success " href="{{ url('/add-galery/{id}') }}">New Images</a>
+                       
        
                         @csrf
                         @method('DELETE')

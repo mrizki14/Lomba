@@ -8,7 +8,7 @@
     <div class="header-hero pb-5">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-12 col-lg-6">
 
             <!-- GAMBAR HERO -->
             <div class="hero-img">
@@ -33,7 +33,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-12 col-lg-6">
             <div class="jumbotron">
               <!-- MAIN JUMBOTRON -->
               <h2>Buat Hidup Lebih Sehat</h2>
@@ -249,41 +249,39 @@
     <!-- *SPECIALIST -->
     <section>
     <div class="section-specialist pb-5">
-      <div class="container" data-swipe-threshold="100">
+      <div class="container">
 
         <div class="title-specialist">
           <h2>TIM SPESIALIS KAMI</h2>
           <h1>Kunjungi Bersama Tim Spesialis Kami</h1>
         </div>
 
-        <input type="radio" name="dot" id="one">
-        <input type="radio" name="dot" id="two">
-        <input type="radio" name="dot" id="three">
-
-        <div class="card-specialist pt-3 ">         
-            <div class="specialists pt-5">
-              <div class="specialist-1">
+        <div class="owl-carousel owl-specialist owl-theme owl-loaded">
+    <div class="owl-stage-outer">
+        <div class=" card-specialist pt-3 ">         
+            <div class="owl-stage  specialists pt-5">
+              <div class="owl-item  specialist-1">
                 <img class="img-fluid card-specialist-1 item" src="{{ asset('assets/image/img-dr-1.png')}}" />
                 <div class="docter-1">
                   <h4>Dr. Alena George</h4>
                   <p>Ahli reumatologi</p>
                 </div>
               </div>
-              <div class="specialist-2">
+              <div class="owl-item  specialist-2">
                 <img class=" img-fluid card-specialist-2 item" src="{{ asset('assets/image/img-dr-2.png')}}" />
                 <div class="docter-2">
                   <h4>Dr. Ashlynn Aminoff</h4>
-                  <p>Praktisi Perawat Psikiatri & Kesehatan Mental Dewasa</p>
+                  <p>Praktisi Perawat Psikiatri</p>
                 </div>
               </div> 
-              <div class="specialist-3">
+              <div class="owl-item  specialist-3">
                 <img class="img-fluid card-specialist-3 item" src="{{ asset('assets/image/img-dr-3.png')}}" />
                 <div class="docter-3">
                   <h4>Dr. Andrea Sczesny, MD</h4>
                   <p>Dokter Gawat Darurat</p>
                 </div>
               </div> 
-              <div class="specialist-4">              
+              <div class="owl-item  specialist-4">              
                 <img class="img-fluid card-specialist-4 item" src="{{ asset('assets/image/img-dr-4.png')}}" />
                 <div class="docter-4">
                   <h4>Dr. Andrea Sczesny, MD</h4>
@@ -291,29 +289,29 @@
                 </div>
               </div>                                   
             </div>
-            <div class="specialists pt-5">
-              <div class="specialist-1">
+            <div class="owl-stage specialists pt-5">
+              <div class="owl-item specialist-1">
                 <img class="img-fluid card-specialist-1 item" src="{{ asset('assets/image/img-dr-1.png')}}" />
                 <div class="docter-1">
                   <h4>Dr. Alena George</h4>
                   <p>Ahli reumatologi</p>
                 </div>
               </div>
-              <div class="specialist-2">
+              <div class="owl-item specialist-2">
                 <img class=" img-fluid card-specialist-2 item" src="{{ asset('assets/image/img-dr-2.png')}}" />
                 <div class="docter-2">
                   <h4>Dr. Ashlynn Aminoff</h4>
-                  <p>Praktisi Perawat Psikiatri & Kesehatan Mental Dewasa</p>
+                  <p>Praktisi Perawat Psikiatri</p>
                 </div>
               </div> 
-              <div class="specialist-3">
+              <div class="owl-item specialist-3">
                 <img class="img-fluid card-specialist-3 item" src="{{ asset('assets/image/img-dr-3.png')}}" />
                 <div class="docter-3">
                   <h4>Dr. Andrea Sczesny, MD</h4>
                   <p>Dokter Gawat Darurat</p>
                 </div>
               </div> 
-              <div class="specialist-4">              
+              <div class="owl-item specialist-4">              
                 <img class="img-fluid card-specialist-4 item" src="{{ asset('assets/image/img-dr-4.png')}}" />
                 <div class="docter-4">
                   <h4>Dr. Andrea Sczesny, MD</h4>
@@ -321,29 +319,29 @@
                 </div>
               </div>                                   
             </div>
-            <div class="specialists pt-5">
-              <div class="specialist-1">
+            <div class="owl-stage specialists pt-5">
+              <div class="owl-item specialist-1">
                 <img class="img-fluid card-specialist-1 item" src="{{ asset('assets/image/img-dr-1.png')}}" />
                 <div class="docter-1">
                   <h4>Dr. Alena George</h4>
                   <p>Ahli reumatologi</p>
                 </div>
               </div>
-              <div class="specialist-2">
+              <div class="owl-item specialist-2">
                 <img class=" img-fluid card-specialist-2 item" src="{{ asset('assets/image/img-dr-2.png')}}" />
                 <div class="docter-2">
                   <h4>Dr. Ashlynn Aminoff</h4>
-                  <p>Praktisi Perawat Psikiatri & Kesehatan Mental Dewasa</p>
+                  <p>Praktisi Perawat Psikiatri</p>
                 </div>
               </div> 
-              <div class="specialist-3">
+              <div class="owl-item specialist-3">
                 <img class="img-fluid card-specialist-3 item" src="{{ asset('assets/image/img-dr-3.png')}}" />
                 <div class="docter-3">
                   <h4>Dr. Andrea Sczesny, MD</h4>
                   <p>Dokter Gawat Darurat</p>
                 </div>
               </div> 
-              <div class="specialist-4">              
+              <div class="owl-item specialist-4">              
                 <img class="img-fluid card-specialist-4 item" src="{{ asset('assets/image/img-dr-4.png')}}" />
                 <div class="docter-4">
                   <h4>Dr. Andrea Sczesny, MD</h4>
@@ -352,12 +350,14 @@
               </div>                                   
             </div>
         </div>
-
-        <div class="button-specialist">
-          <label for="one" class="one active"></label>
-          <label for="two" class="two"></label>
-          <label for="three" class="three"></label>
         </div>
+
+    </div>
+        <div class="owl-dots">
+        <div class="owl-dot active"><span></span></div>
+        <div class="owl-dot"><span></span></div>
+        <div class="owl-dot"><span></span></div>
+    </div>
 
         </div>        
       </div>
@@ -373,56 +373,123 @@
           <h1>Apa yang <span>Pengguna</span> Katakan</h1>
           <p>Lihat hasil Survei Kepuasan Pelanggan terbaru kami dan testimoni pelanggan utama tentang bagaimana kami bekerja dan melayani para pengguna. Dimulai dari usia dini hingga dewasa</p>
         </div>
-        <div class="">
-          <div class="card-customer-say owl-carousel owl-customer owl-theme">
-            <div class="customer-1">
-              <div class="card card-customer-say-1">
-                <div class="row">
-                  <div class="col-7">
-                    <div class="card-body">
-                      <h4 class="card-title title-customer-1">Ahmed Dedat</h4>
-                      <p>Engineer</p>
-                      <p class="card-text text-customer-say">Penangannya sangat baik, orang-orangnya ramah pelayanannya sangat ramah dan profesional</p>
-                      <div class="rating-customer">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill start-customer"></i>
+
+        <div class="card-customer-say owl-carousel owl-customer owl-theme owl-loaded">
+          <div class="owl-stage-outer">
+            <div class="owl-stage card-customer-say">
+
+                <div class="owl-item customer-1" >
+                  <div class="card card-customer-say-1">
+                      <div class="col-3 d-flex justify-content-between w-100">
+                        <div class="title-customer ms-3 mt-3">
+                          <h4 class="card-title">Johnson Tyson</h4>
+                          <p>Networking</p>
+                        </div>
+                        <div>
+                          <img src="{{asset('assets/image/customer-say-1.png')}}" class="img-card-customer img-fluid " alt="" />
+                        </div>
+                      </div>
+                      <div class="col-9 w-100">
+                        <div class="card-body">
+                        <p class="card-text text-customer-say">Anda memiliki beberapa formula yang Anda gunakan untuk kesehatan dan mengoperasionalkannya dengan orang-orang atau mengotomatiskannya dengan teknologi dan sekarang anda sudah mengoperasikan.</p>
+                        <div class="rating-customer">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill start-customer"></i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-5">
-                    <img src="{{ asset('assets/image/customer-say-1.png')}}" class=" img-card-customer-1" alt="" />
+
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="customer-1">
-              <div class="card card-customer-say-2">
-                <div class="row">
-                  <div class="col-7">
-                    <div class="card-body">
-                      <h4 class="card-title title-customer-1">Kevin Ahmad</h4>
-                      <p>Docter</p>
-                      <p class="card-text text-customer-say">Awalnya saya sangat bingung bagaimana mencari informasi kesehatan, dan akhirnya saya menemukan website ini!</p>
-                      <div class="rating-customer">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill start-customer"></i>
+
+                <div class="owl-item customer-2" >
+                  <div class="card card-customer-say-2">
+                      <div class="col-3 d-flex justify-content-between w-100">
+                        <div class="title-customer ms-3 mt-3">
+                          <h4 class="card-title">Charlotte Linlin</h4>
+                          <p>UMKM</p>
+                        </div>
+                        <div>
+                          <img src="{{asset('assets/image/customer-say-1.png')}}" class="img-fluid img-card-customer" alt="" />
+                        </div>
+                      </div>
+                      <div class="col-9 w-100">
+                        <div class="card-body">
+                        <p class="card-text text-customer-say">Anda memiliki beberapa formula yang Anda gunakan untuk kesehatan dan mengoperasionalkannya dengan orang-orang atau mengotomatiskannya dengan teknologi dan sekarang anda sudah mengoperasikan.</p>
+                        <div class="rating-customer">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill start-customer"></i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-5">
-                    <img src="{{ asset('assets/image/customer-say-1.png')}}" class=" img-card-customer-1" alt="" />
+
                   </div>
                 </div>
-              </div>
+
+                <div class="owl-item customer-1" >
+                  <div class="card card-customer-say-1">
+                      <div class="col-3 d-flex justify-content-between w-100">
+                        <div class="title-customer ms-3 mt-3">
+                          <h4 class="card-title">Mike Tyson</h4>
+                          <p>Networking</p>
+                        </div>
+                        <div>
+                          <img src="{{asset('assets/image/customer-say-1.png')}}" class="img-fluid img-card-customer" alt="" />
+                        </div>
+                      </div>
+                      <div class="col-9 w-100">
+                        <div class="card-body">
+                        <p class="card-text text-customer-say">Anda memiliki beberapa formula yang Anda gunakan untuk kesehatan dan mengoperasionalkannya dengan orang-orang atau mengotomatiskannya dengan teknologi dan sekarang anda sudah mengoperasikan.</p>
+                        <div class="rating-customer">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill start-customer"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="owl-item customer-2" >
+                  <div class="card card-customer-say-2">
+                      <div class="col-3 d-flex justify-content-between w-100">
+                        <div class="title-customer ms-3 mt-3">
+                          <h4 class="card-title">Zindan</h4>
+                          <p>Networking</p>
+                        </div>
+                        <div>
+                          <img src="{{asset('assets/image/customer-say-1.png')}}" class="img-fluid img-card-customer" alt="" />
+                        </div>
+                      </div>
+                      <div class="col-9 w-100">
+                        <div class="card-body">
+                        <p class="card-text text-customer-say">Anda memiliki beberapa formula yang Anda gunakan untuk kesehatan dan mengoperasionalkannya dengan orang-orang atau mengotomatiskannya dengan teknologi dan sekarang anda sudah mengoperasikan.</p>
+                        <div class="rating-customer">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill start-customer"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
             </div>
           </div>
         </div>
+
       </div>
     </div>
 

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
     <!-- STYLE CSS -->
     <link rel="stylesheet" href="/assets/css/dieseases.css" />
-    <title>HisCARE - Penyakit</title>
+    <title>Penyakit @yield('title')</title>
   </head>
 
   <body>

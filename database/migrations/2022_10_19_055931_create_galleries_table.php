@@ -13,9 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('hospitals', function (Blueprint $table) {
-            $table->unsignedBigInteger('hospital_id')->after('dukungan');
-            $table->foreign('hospital_id')->references('id')->on('galleries')->onDelete('cascade');
+        Schema::create('galleries', function (Blueprint $table) {
+            $table->id();
+            $table->integer('hospital_id');
+            $table->string('image_url');
+            $table->timestamps();
         });
     }
 
@@ -26,8 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('hospitals', function (Blueprint $table) {
-            $table->dropColumn('hospital_id');
-        });
+        Schema::dropIfExists('galleries');
     }
 };
