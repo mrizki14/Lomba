@@ -265,7 +265,8 @@ header {
   border-radius: 6px !important;
 }
 .btn-detail {
-  color: var(--second-color);
+  color: #fff;
+  background-color: var(--second-color);
   border: 1px solid var(--second-color);
   padding: 8px 60px 8px 60px;
   border-radius: 8px;
@@ -273,8 +274,8 @@ header {
   text-decoration: none;
 }
 .btn-detail:hover {
-  background-color: var(--second-color);
-  color: white;
+  background-color: #fff;
+  color: #1b262c;
 }
 .search input,
 button,

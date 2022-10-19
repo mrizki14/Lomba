@@ -34,12 +34,13 @@
                     <form action="{{ route('hospitals.destroy',$d->id) }}" method="POST">
        
                         <a class="btn btn-info" href="{{ route('hospitals.show',$d->id) }}">Show</a>
-                        <a class="btn btn-primary" href="{{ route('hospitals.edit',$d->id) }}">Edit</a>
+                        <a class="btn btn-primary " href="{{ route('hospitals.edit',$d->id) }}">Edit</a>
+                        <a class="btn btn-success " href="{{ url('/add-galery/{id}') }}">New Images</a>
        
                         @csrf
                         @method('DELETE')
           
-                        <button type="submit" onclick="return confirm('Are you sure?')" class="btn btn-danger">Delete</button>
+                        <button type="submit" onclick="return confirm('Are you sure?')" class="btn btn-danger w-0 ">Delete</button>
                     </form>
                 </td>
             </tr>

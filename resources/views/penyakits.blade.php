@@ -75,55 +75,60 @@
               <p class="nm-symptom mb-2">Gejala</p>
               <div class="d-flex mb-4">
                 <input class="input-gejala form-control" type="text" name="penyakit" placeholder="Batuk" aria-label="default input example" />
-                  <button class="btn button-search" hidden type="submit"><img src="{{ asset('assets/image/icon/icon-search.svg') }}" alt="" /></button>
+                  <button class="btn button-search" type="submit"><img src="{{ asset('assets/image/icon/icon-search.svg') }}" alt="" /></button>
               </div>
               
               <div class="card card-filter mb-4" style="width: 100%">
                 <div class="card-body">
                   <p class="card-text">Kualifikasi</p>
-                  <input class="input-filter form-control mb-3" type="text" placeholder="Cari" aria-label="default input example" />
+                  <form method="get" action="{{ url('penyakit/filter') }}">
+                    <div class="d-flex mb-4">
+                      <input class="input-filter form-control " type="text" placeholder="Cari" aria-label="default input example" />
+                      <button class="btn button-search" type="submit"><img src="{{ asset('assets/image/icon/icon-search.svg') }}" alt="" /></button>
+                    </div>
                   <div class="scroll">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                      <input class="form-check-input" type="checkbox" name="kualifikasi[]" id="flexCheckDefault" value="Penyakit Kulit"/>
                       <label class="form-check-label" for="flexCheckDefault"> Penyakit Kulit </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                      <input class="form-check-input" type="checkbox" name="kualifikasi[]" id="flexCheckDefault" value="Penyakit Lambung" />
                       <label class="form-check-label" for="flexCheckDefault"> Penyakit Lambung </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                      <input class="form-check-input" type="checkbox" name="kualifikasi[]" id="flexCheckDefault" value="Penyakit Jantung"/>
                       <label class="form-check-label" for="flexCheckDefault"> Penyakit Jantung </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                      <input class="form-check-input" type="checkbox" name="kualifikasi[]" id="flexCheckDefault" value="Penyakit Tulang" />
                       <label class="form-check-label" for="flexCheckDefault"> Penyakit Tulang </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
+                      <input class="form-check-input" type="checkbox" name="kualifikasi[]" id="flexCheckChecked" value="Penyakit Ginjal" />
                       <label class="form-check-label" for="flexCheckChecked"> Penyakit Ginjal </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                      <input class="form-check-input" type="checkbox" name="kualifikasi[]" id="flexCheckDefault" value="Penyakit Usus" />
                       <label class="form-check-label" for="flexCheckDefault"> Penyakit Usus </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
+                      <input class="form-check-input" type="checkbox" name="kualifikasi[]" id="flexCheckChecked" value="Penyakit Otak" />
                       <label class="form-check-label" for="flexCheckChecked"> Peynakit Paru-Paru </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                      <input class="form-check-input" type="checkbox" name="kualifikasi[]" id="flexCheckDefault" value="Penyakit Otak" />
                       <label class="form-check-label" for="flexCheckDefault"> Penyakit Otak </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
+                      <input class="form-check-input" type="checkbox" name="kualifikasi[]" id="flexCheckChecked" value="Penyakit Mata"/>
                       <label class="form-check-label" for="flexCheckChecked"> Penyakit Mata </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
+                      <input class="form-check-input" type="checkbox" name="kualifikasi[]" id="flexCheckChecked" value="Penyakit Bipolar" />
                       <label class="form-check-label" for="flexCheckChecked"> Penyakit Bipolar </label>
                     </div>
                   </div>
+                  </form>
                 </div>
               </div>
            
@@ -131,41 +136,46 @@
               <div class="card card-filter mb-4" style="width: 100%">
                 <div class="card-body">
                   <p class="card-text">Nama Medis</p>
-                  <input class="input-filter form-control mb-3" type="text" placeholder="Cari" aria-label="default input example" />
-                  <div class="scroll">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                      <label class="form-check-label" for="flexCheckDefault"> Gastroesophageal Reflux Disease (GERD) </label>
+                  <form method="get" action="{{ url('namaMedis/filter') }}">
+                    <div class="d-flex mb-4">
+                      <input class="input-filter form-control " type="text" placeholder="Cari" aria-label="default input example" />
+                      <button class="btn button-search" type="submit"><img src="{{ asset('assets/image/icon/icon-search.svg') }}" alt="" /></button>
                     </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                      <label class="form-check-label" for="flexCheckDefault"> Abscess </label>
+                    <div class="scroll">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="nama_medis[]" value="Gastroesophageal Reflux Disease (GERD)" id="flexCheckDefault" />
+                        <label class="form-check-label" for="flexCheckDefault"> Gastroesophageal Reflux Disease (GERD) </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Abscess" name="nama_medis[] value="" id="flexCheckDefault" />
+                        <label class="form-check-label" for="flexCheckDefault"> Abscess </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Iskemia" id="flexCheckDefault" />
+                        <label class="form-check-label" for="flexCheckDefault"> Iskemia </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="nama_medis[]" value="Osteoporosis" id="flexCheckChecked" />
+                        <label class="form-check-label" for="flexCheckChecked"> Osteoporosis </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="nama_medis[]" value="Kidney stone " id="flexCheckDefault" />
+                        <label class="form-check-label" for="flexCheckDefault"> Kidney stone </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="nama_medis[]" value="Ulcerative colitis" id="flexCheckChecked" />
+                        <label class="form-check-label" for="flexCheckChecked"> Ulcerative colitis </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="nama_medis[]" value="Pneumonia" id="flexCheckDefault" />
+                        <label class="form-check-label" for="flexCheckDefault"> Pneumonia </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="nama_medis[]" value="Konjungtivitis" id="flexCheckChecked" />
+                        <label class="form-check-label" for="flexCheckChecked"> Konjungtivitis </label>
+                      </div>
                     </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                      <label class="form-check-label" for="flexCheckDefault"> Iskemia </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
-                      <label class="form-check-label" for="flexCheckChecked"> Osteoporosis </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                      <label class="form-check-label" for="flexCheckDefault"> Kidney stone </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
-                      <label class="form-check-label" for="flexCheckChecked"> Ulcerative colitis </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                      <label class="form-check-label" for="flexCheckDefault"> Pneumonia </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
-                      <label class="form-check-label" for="flexCheckChecked"> Konjungtivitis </label>
-                    </div>
-                  </div>
+                  </form>
                 </div>
               </div>
     

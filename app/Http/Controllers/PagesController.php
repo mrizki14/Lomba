@@ -11,7 +11,7 @@ class PagesController extends Controller
 {
     public function index(Request $request)
     {
-        return view('/');
+        return view('index');
     }
 
     public function rumahsakits(Request $request)
@@ -37,14 +37,54 @@ class PagesController extends Controller
     public function penyakits(Request $request)
     {
 
+
+
         $penyakit = $request->penyakit;
         $diseases = Disease::where('nama', 'LIKE', '%' . $penyakit . '%')
             ->orWhere('kualifikasi', 'LIKE', '%' . $penyakit . '%')
             ->get();
 
+
+
         return view('penyakits', compact('diseases'));
         // ->with('i', (request()->input('page', 1) - 1) * 9);
     }
+
+    public function filterKualifikasi(Request $request)
+    {
+        // $data = implode(',', $request->kualifikasi);
+
+
+
+        // $diseases = Disease::whereHas('', function ($query) use ($request) {
+        //     $query->where('kualifikasi', $request->kualifikasi);
+        // })->get();
+
+        $pages = Disease::query();
+        foreach ($request->kualifikasi as $word) {
+            $pages->orWhere('kualifikasi', 'LIKE', '%' . $word . '%');
+        }
+        $diseases = $pages->distinct()->get();
+
+        // dd($pages);
+
+        // dd($request->kualifikasi);
+        return view('penyakits', compact('diseases'));
+    }
+    public function namamediskualifikasi(Request $request)
+    {
+        $pages = Disease::query();
+        foreach ($request->nama_medis as $word) {
+            $pages->orWhere('nama_medis', 'LIKE', '%' . $word . '%');
+        }
+        $diseases = $pages->distinct()->get();
+
+        // dd($pages);
+
+        // dd($request->kualifikasi);
+        return view('penyakits', compact('diseases'));
+    }
+
     public function detailpenyakit($id)
     {
         $disease = Disease::find($id);
