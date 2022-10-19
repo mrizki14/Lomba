@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Hospital;
+use App\Models\Galery;
 use Illuminate\Http\Request;
+use Storage;
+use Illuminate\Support\Facades\DB;
 
 
 class HospitalsController extends Controller
@@ -52,6 +55,9 @@ class HospitalsController extends Controller
 
         $request->image->move(public_path('imagesHospitals'), $imagesHospitals);
 
+        $hospital = new Hospital;
+
+        
         Hospital::create([
             'nama' => $request->input('nama'),
             'lokasi' => $request->input('lokasi'),
@@ -63,7 +69,7 @@ class HospitalsController extends Controller
             'fasilitas' => $request->input('fasilitas'),
             'dukungan' => $request->input('dukungan'),
         ]);
-
+        
         return redirect()->route('hospitals.index')
             ->with('success', 'Product created successfully.');
     }

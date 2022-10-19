@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Hospital;
+use App\Models\Galery;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
@@ -19,6 +20,7 @@ class HospitalController extends Controller
     public function show($id)
     {
         $hospital = Hospital::where('id', $id)->first();
-        return view('rumahsakit', compact('hospital'));
+        $galleries = Galery::where('hospital_id', $id)->first();
+        return view('rumahsakit', compact('hospital', 'galleries'));
     }
 }
