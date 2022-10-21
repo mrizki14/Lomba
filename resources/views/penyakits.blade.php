@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
     <!-- STYLE CSS -->
     <link rel="stylesheet" href="/assets/css/dieseases.css" />
-    <title>Penyakit @yield('title')</title>
+    <title>HisCARE - Penyakit </title>
   </head>
 
   <body>
@@ -71,12 +71,14 @@
                   <input class="form-control input-search" name="penyakit" type="search" placeholder="Cari" aria-label="default input example" value="{{ request('penyakit') }}" />
                   <button class="btn button-search" type="submit"><img src="{{ asset('assets/image/icon/icon-search.svg') }}" alt="" /></button>
                 </div>    
-              </form>    
-              <p class="nm-symptom mb-2">Gejala</p>
-              <div class="d-flex mb-4">
-                <input class="input-gejala form-control" type="text" name="penyakit" placeholder="Batuk" aria-label="default input example" />
-                  <button class="btn button-search" type="submit"><img src="{{ asset('assets/image/icon/icon-search.svg') }}" alt="" /></button>
-              </div>
+              </form> 
+              <form action="" method="get"> 
+                <p class="nm-symptom mb-2">Gejala</p>
+                <div class="d-flex mb-4">
+                  <input class="input-gejala form-control" type="text" name="gejala" placeholder="Batuk" aria-label="default input example" />
+                    <button class="btn button-search" type="submit"><img src="{{ asset('assets/image/icon/icon-search.svg') }}" alt="" /></button>
+                </div>
+              </form>
               
               <div class="card card-filter mb-4" style="width: 100%">
                 <div class="card-body">

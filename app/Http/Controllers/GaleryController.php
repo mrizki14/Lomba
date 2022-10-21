@@ -27,12 +27,13 @@ class GaleryController extends Controller
         //         ]);
         //     }
         // }
-        $hospital = Hospital::all();
-        return view('rumahsakit')
-            ->with('success', 'Product created successfully.');
+        // $hospital = Hospital::all();
+        // return view('contents.dashboard.hospitals.imageGalery')
+        //     ->with('success', 'Product created successfully.');
     }
 
-    public function tambahGalery($id) {
+    public function tambahGalery($id)
+    {
         return view('contents.dashboard.hospitals.imageGalery', compact('id'));
     }
 
@@ -67,7 +68,7 @@ class GaleryController extends Controller
     }
     public function show(Galery $id)
     {
-        $galleries = Galery::find('id');
-        return view('/rumahsakit', compact('galleries'));
+        $galleries = Galery::where('hospital_id', $id)->first();
+        return view('rumahsakit', compact('hospital', 'galleries'));
     }
 }

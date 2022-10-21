@@ -492,10 +492,14 @@ header {
 @media only screen and (max-width: 620px) {
   .jumbotron {
     margin-left: 0;
-    margin-top: 18.5em !important;
+    margin-top: 20em !important;
   }
 }
-
+@media only screen and (min-width: 1450px) {
+  .jumbotron {
+    margin-top: 11rem;
+  }
+}
 .jumbotron {
   color: var(--four-color);
   font-size: 25px;
@@ -595,7 +599,7 @@ header {
   background: rgba(255, 255, 255, 0.05);
   border: none;
 }
-#form-control:focus {
+.form-control:focus {
   background: rgba(255, 255, 255, 0.05);
 }
 input:focus {
@@ -698,7 +702,7 @@ input:focus {
   .value-2,
   .value-3 {
     margin-top: 30px;
-    width: 250px;
+    width: 71%;
     height: 64px;
     text-align: center;
   }
@@ -965,7 +969,7 @@ input:focus {
   }
   .main-works p {
     font-size: 15px;
-    width: 100%;
+    width: 98%;
     margin-left: 1rem;
   }
 }
@@ -1187,12 +1191,24 @@ input:focus {
   .title-specialist h1 {
     font-size: 25px;
   }
+  .specialist-1,
+  .specialist-2,
+  .specialist-3,
+  .specialist-4 {
+    margin-right: 45px !important;
+    margin-left: 85px !important;
+  }
 }
 /* !CARD SPECIALIST */
 .section-specialist .container {
   overflow-x: hidden;
   padding: 50px 0 !important;
   max-width: 1208px !important;
+}
+@media only screen and (min-width: 1450px) {
+  .section-specialist .container {
+    max-width: 1160px !important;
+  }
 }
 .card-specialist {
   display: flex;
@@ -1381,6 +1397,9 @@ input:focus {
   }
 }
 @media only screen and (max-width: 620px) {
+  .img-card-customer {
+    width: 77% !important;
+  }
   .card-customer-say {
     padding-bottom: 50px;
   }
@@ -1406,7 +1425,7 @@ input:focus {
 }
 
 .img-card-customer {
-  width: 45% !important;
+  width: 45%;
   height: auto;
   float: right;
 }
@@ -1518,4 +1537,20 @@ input:focus {
     width: 100%;
     padding-bottom: 1rem;
   }
+}
+.section-message {
+  max-width: 1000px;
+  background: url();
+}
+.section-name,
+.section-job,
+.section-message,
+.section-email {
+  display: flex;
+  flex-direction: column;
+}
+.btn-submit {
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 1rem;
 }

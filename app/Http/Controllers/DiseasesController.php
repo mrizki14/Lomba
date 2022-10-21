@@ -113,7 +113,6 @@ class DiseasesController extends Controller
             'penyebab' => 'required',
             'obat' => 'required',
 
-
         ]);
 
         $disease->update($request->all());

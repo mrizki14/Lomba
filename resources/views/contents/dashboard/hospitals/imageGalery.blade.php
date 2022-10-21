@@ -27,7 +27,8 @@
             <input type="hidden" name="hospital_id" value="{{$id}}">
             <div class="form-group">
                 <strong>Gambar Rumah Sakit</strong>
-                <option value="{{ $value->id }}"></option>
+                {{-- <option value="{{$value->id}}"></option> --}}
+                <input name="image_url" type="file" multiple>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center my-3">

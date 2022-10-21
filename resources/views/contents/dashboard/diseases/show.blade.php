@@ -1,6 +1,7 @@
 @extends('templates.pages')
   
 @section('content')
+
 <div class="container">
     <div class="row mt-5">
         <div class="col-lg-12 margin-tb">

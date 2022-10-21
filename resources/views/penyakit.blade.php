@@ -10,23 +10,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
     <!-- STYLE CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/detailpenyakit.css') }}" />
-    <link rel="icon" href="{{ asset('assets/image/brand-2.png')}}" />
-    <title>
-      @section('title')
-        {{ $disease->nama }}
-      @endsection
-  </title>
+    <link rel="icon" href="/assets/image/brand-2.png" />  
+    <title>Penyakit {{ $disease->nama }} </title>
   </head>
   <body>
     <!-- *NAVBAR* -->
-    @include('layouts.home.navbar')
+    @include('layouts.home.navbar2')
 
     <!-- !DETAIL -->
     <header>
       <div class="container-fluid">
         <div class="jenis-penyakit">
           <div class="row">
-            <div class="col-6 ps-5 title-penyakit">
+            <div class="col-12 col-md-6 ps-5 title-penyakit">
               <div class="content-penyakit">
                 <img src="{{ asset('imagesDiseases/' .$disease->image_path ) }}" alt="" />
                 <p>Nama Penyakit</p>
@@ -44,7 +40,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-6 pe-0">
+            <div class="col-12 col-md-6 pe-0">
               <div class="detail-penyakit float-end">
                 <h3>Penjelasan</h3>
                 <div class="accordions">

@@ -13,7 +13,7 @@ class HospitalsController extends Controller
 {
     public function index()
     {
-        $hospitals = Hospital::paginate(6);
+        $hospitals = Hospital::paginate(20);
 
         return view('contents.dashboard.hospitals.index', compact('hospitals'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
@@ -45,8 +45,7 @@ class HospitalsController extends Controller
             'keahlian_penyakit' => 'required',
             'obat_penyakit' => 'required',
             'rincian_penanganan' => 'required',
-            'fasilitas' => 'required',
-            'dukungan' => 'required'
+
         ]);
 
         $imagesHospitals = time() . '-' .  $request->nama . '-' .
@@ -57,7 +56,7 @@ class HospitalsController extends Controller
 
         $hospital = new Hospital;
 
-        
+
         Hospital::create([
             'nama' => $request->input('nama'),
             'lokasi' => $request->input('lokasi'),
@@ -66,10 +65,9 @@ class HospitalsController extends Controller
             'keahlian_penyakit' => $request->input('keahlian_penyakit'),
             'obat_penyakit' => $request->input('obat_penyakit'),
             'rincian_penanganan' => $request->input('rincian_penanganan'),
-            'fasilitas' => $request->input('fasilitas'),
-            'dukungan' => $request->input('dukungan'),
+
         ]);
-        
+
         return redirect()->route('hospitals.index')
             ->with('success', 'Product created successfully.');
     }
@@ -108,13 +106,12 @@ class HospitalsController extends Controller
         $request->validate([
             'nama' => 'required',
             'lokasi' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
+            // 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
             'deskripsi' => 'required',
             'keahlian_penyakit' => 'required',
             'obat_penyakit' => 'required',
             'rincian_penanganan' => 'required',
-            'fasilitas' => 'required',
-            'dukungan' => 'required'
+
         ]);
 
         $hospital->update($request->all());

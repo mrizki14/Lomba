@@ -372,9 +372,14 @@ header {
 /* JENIS PENYAKIT */
 .title-penyakit img {
   margin-top: 6rem;
-  width: 130px;
-  height: 80px;
-  border: none;
+  width: 120px;
+  height: 120px;
+  border: 1px solid var(--second-color);
+  padding: 1px;
+  border-radius: 50%;
+}
+.content-penyakit {
+  margin-top: 5rem;
 }
 .content-penyakit p {
   margin-top: 12px;
@@ -401,7 +406,7 @@ header {
 
   position: absolute;
   left: 0px;
-  top: 359px;
+  bottom: 0;
 }
 .description-penyakit h4,
 .description-penyakit p {
@@ -433,7 +438,7 @@ header {
 .detail-penyakit {
   width: 440px;
   height: auto;
-  margin-top: 50px;
+  margin-top: 10rem;
 }
 .detail-penyakit h3 {
   color: var(--second-color);
@@ -535,12 +540,11 @@ input:checked ~ .acc-content {
 /* *MOBILE */
 @media screen and (max-width: 620px) {
   header {
-    background-size: auto !important;
-    width: auto;
-    background-position: right -70px center !important;
-    background-attachment: scroll;
-    height: 102vh;
-    margin-top: 1.8rem;
+    width: 100%;
+    background-position: right -60px center !important;
+    background-attachment: fixed;
+    height: 100vh;
+    display: block;
   }
   /* !MENU NAVBAR */
   .navbar {
@@ -613,7 +617,12 @@ input:checked ~ .acc-content {
   .detail-penyakit h3 {
     padding: 10px 0px 10px 100px;
   }
+  .title-penyakit {
+    padding-left: 0 !important;
+  }
   .title-penyakit img {
+    width: 180px;
+    height: 180px;
     margin: 0;
   }
   .description-penyakit {
@@ -624,7 +633,7 @@ input:checked ~ .acc-content {
     line-height: 20px;
   }
   .title-penyakit {
-    margin-top: 42rem;
+    margin-top: 178%;
   }
   .accordion-explanation {
     width: 100%;
@@ -638,6 +647,23 @@ input:checked ~ .acc-content {
   .back-menu svg {
     width: 9%;
     height: auto;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .content-penyakit {
+    margin-top: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .content-penyakit h4 {
+    font-size: 18px;
+  }
+  .content-penyakit p {
+    font-size: 14px;
+  }
+  .detail-penyakit {
+    margin-top: 5rem;
   }
 }
 
@@ -684,7 +710,6 @@ input:checked ~ .acc-content {
   /* *DETAIL-PENYAKIT */
   header {
     display: block;
-    background-image: url(/image/human.svg);
     background-size: 93vh;
     background-repeat: no-repeat;
     background-position: right 41rem bottom !important;
@@ -713,6 +738,7 @@ input:checked ~ .acc-content {
     font-family: "Poppins", sans-serif;
     font-size: 24px;
   }
+
   .description-penyakit {
     margin-top: 68px;
     margin-right: 10px;

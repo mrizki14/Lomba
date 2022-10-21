@@ -10,7 +10,7 @@ class Hospital extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nama', 'lokasi', 'image_path', 'deskripsi', 'keahlian_penyakit', 'obat_penyakit', 'rincian_penanganan', 'fasilitas', 'dukungan', 'review_id',
+        'nama', 'lokasi', 'image_path', 'deskripsi', 'keahlian_penyakit', 'obat_penyakit', 'rincian_penanganan', 'review_id',
     ];
     public function galery()
     {

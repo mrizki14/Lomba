@@ -199,7 +199,7 @@
                   <h5 class="card-title title-card-works">Memantau 24/7</h5>
                   </div>
                   <div class="card-body card-body-work">
-                    <p class="card-text text-card-works">Kenyamanan,keamanan pasien dan keluarga menjadi prioritas terbesar kami dalam menangani seseorang.</p>
+                    <p class="card-text text-card-works">Kenyamanan,keamanan pasien menjadi prioritas terbesar kami dalam menangani pasien.</p>
                   </div>
                 </div>
               </div>
@@ -482,15 +482,42 @@
                         </div>
                       </div>
                     </div>
-
                   </div>
                 </div>
-
+              </div>
             </div>
           </div>
         </div>
-
       </div>
-    </div>
+    </div> 
 
+    <div class="section-message container pb-5">
+    <form action="/kirim" method="POST">
+    @csrf
+
+        <div class="row">
+          <div class="col-6 section-name">
+            <label for="title" class="form-label">Name</label>
+            <input type="text" required name="title" class="" placeholder="Nama">
+          </div>
+          <div class="col-6 section-job">
+            <label for="job" class="form-label">Jobs</label>
+            <input type="text" name="job" class="" placeholder="Pekerjaan">
+          </div>
+          <div class="col-12 section-email">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" required name="email" class="" placeholder="Email">
+          </div>
+          <div class="col-12 section-message">
+            <label for="message" class="form-label">Message</label>
+            <textarea name="message" id="" cols="30" rows="10"></textarea>
+          </div>
+            <button class="btn btn-submit" type="submit">Submit</button>
+            @if (session()->has('alert'))
+            <p>{{ session()->get('alert') }}</p>
+            @endif
+          </div>
+        </form>
+      </div>
+      
 @endsection

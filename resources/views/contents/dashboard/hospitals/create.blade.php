@@ -61,7 +61,7 @@
                     <input type="text" name="rincian_penanganan" class="form-control" placeholder="Masukan Rinican Penanganan Rumah Sakit">
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 mb-3">
+            {{-- <div class="col-xs-12 col-sm-12 col-md-12 mb-3">
                 <div class="form-group">
                     <strong>Fasilitas Rumah Sakit</strong>
                     <input type="text" name="fasilitas" class="form-control" placeholder="Masukan Fasilitas Rumah Sakit">
@@ -72,17 +72,17 @@
                     <strong>Dukungan Rumah Sakit</strong>
                     <input type="text" name="dukungan" class="form-control" placeholder="Masukan Dukungan Rumah Sakit">
                 </div>
-            </div>
+            </div> --}}
             <div class="col-xs-12 col-sm-12 col-md-12 mb-3">
                 <div class="form-group">
                     <strong>Thumbnail Rumah Sakit</strong>
-                    <input type="file" name="image" class="form-control" placeholder="Masukan Lokasi Rumah Sakit">
+                    <input type="file" name="image" class="form-control" placeholder="Masukan Thumbnail Rumah Sakit">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 mb-3">
                 <div class="form-group">
                     <strong>Galeri Rumah Sakit</strong>
-                    <input type="file" name="galeri" class="form-control" placeholder="Masukan Lokasi Rumah Sakit" multiple>
+                    <input type="file" name="galeri" class="form-control" placeholder="Masukan Gambar Sakit" multiple>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center mt-3">

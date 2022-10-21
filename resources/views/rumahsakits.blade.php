@@ -56,8 +56,8 @@
               <div class="col-lg-6 col-sm-2">
                 <div class="detail-populer-hospitals">
                   <div class="text-populer-hospital">
-                    <h5>Santo Yusup Hospital</h5>
-                    <h2>Pelayanan Terbaik Hospital Periode 2020/2021.</h2>
+                    <h5>Rumah Sakit Santo Yusup</h5>
+                    <h2>Rumah Sakit Pelayanan Terbaik Periode 2020/2021.</h2>
                     <p class="detail-populer-hospitals">Pelayanan terbaik diraih rumah sakit santo yusup setelah beberapa kali menangani kasus gawat darurat pasien dan mendapatkan hasil memuaskan untuk 90% pasien.</p>
                   </div>
                   <div class="data-populer-hospitals">
@@ -81,8 +81,8 @@
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <a href="#" class="btn btn-populer-hospitals-1 text-light">Lihat Rumah Sakit</a>
+                  </div>             
+                  <a href="{{ url('/santoyusup') }} " class="btn btn-populer-hospitals-1 text-light">Lihat Rumah Sakit</a>
                   <a href="#list-hospitals" class="btn btn-populer-hospitals-2"> Rumah Sakit Lainnya</a>
                 </div>
               </div>
@@ -118,7 +118,7 @@
                         <button class="btn">Lung</button>
                       </div>
                       <h5 class="card-title-hospital">{{ $d->nama }}</h5>
-                      <a href="https://goo.gl/maps/nK2ZWwPKZspFKUqw7" class="location"><img src="{{ asset('assets/image/icon/location.svg')}}" />{{ $d->lokasi }}</a>
+                      <a href="https://goo.gl/maps/nK2ZWwPKZspFKUqw7" class="location"><img src="{{ asset('assets/image/icon/location.svg')}}" />{{ $d->lokasi }}, Indonesia</a>
                       <div class="rating-hospital">
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>

@@ -46,6 +46,7 @@ class PagesController extends Controller
 
 
 
+
         return view('penyakits', compact('diseases'));
         // ->with('i', (request()->input('page', 1) - 1) * 9);
     }
@@ -89,6 +90,11 @@ class PagesController extends Controller
     {
         $disease = Disease::find($id);
         return view('/penyakit', compact('disease'));
+    }
+
+    public function santoyusup()
+    {
+        return view('santoyusuf');
     }
     public function tentang()
     {

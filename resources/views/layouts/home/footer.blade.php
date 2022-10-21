@@ -29,10 +29,10 @@
               <div class="col-6 col-md-3">
                 <p>Our Links</p>
                 <ul>
-                  <li><a href="#"> Work with us</a></li>
+                  <li><a href="#">Work with us</a></li>
                   <li><a href="#">Help Center</a></li>
                   <li><a href="#">Privacy Policy</a></li>
-                  <li><a href="#">Hopital</a></li>
+                  <li><a href="#">Hospital</a></li>
                 </ul>
               </div>
               <div class="col-12 col-md-6">

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="image/brand-2.png" />
+    <link rel="icon" href="/assets/image/brand-2.png" />  
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="/assets/css/bootstrap.css" />
     <!-- ICON BOOTSTRAP -->
@@ -12,11 +12,11 @@
     <!-- STYLE CSS -->
     <link rel="stylesheet" href="/assets/css/detailhospital.css" />
   
-    <title>RSAI</title>
+    <title>Rumah Sakit {{ $hospital->nama }}</title>
   </head>
   <body>
     <!-- *NAVBAR -->
-    @include('layouts.home.navbar')
+    @include('layouts.home.navbar2')
     <!-- *HERO -->     
     <header>
       <div class="header-detail-hospitals">
@@ -35,7 +35,7 @@
                 <?php $count = 0; ?>
                 @foreach ($hospital->galery()->get() as $g)
                     <?php if($count == 3) break; ?>
-                    <img src="{{ asset('imagesGalery/'.$g->image_url )}}" class="img-header-1" alt="" />
+                    <img src="{{ asset('imagesGalery/'.$g->image_url )}}" class="img-header-2" alt="" />
                     <?php $count++; ?>
                 @endforeach
               </div>
@@ -207,22 +207,10 @@
       <div class="container">
         <h5>Galeri Rumah Sakit</h5>
         <div class="row">
-          <div class="col-3 galeri-1">
-            @foreach ($hospital->galery()->get() as $galery)
+          @foreach ($hospital->galery()->get() as $galery)
+          <div class="col-6 col-md-3 galeri-1 py-3">
             <img src="{{ asset('imagesGalery/'.$galery->image_url )}}" alt="">
           </div>          
-          <div class="col-3 galeri-2 ">
-            <img src="{{ asset('imagesGalery/'.$galery->image_url )}}" alt="">
-            <img src="{{ asset('imagesGalery/'.$galery->image_url )}}" alt="">
-          </div>
-          <div class="col-3 galeri-3 ">
-            <img src="{{ asset('imagesGalery/'.$galery->image_url )}}" alt="">
-            <img src="{{ asset('imagesGalery/'.$galery->image_url )}}" alt="">
-          </div>
-          <div class="col-3 galeri-4">
-            <img src="{{ asset('imagesGalery/'.$galery->image_url )}}" alt="">
-            <img src="{{ asset('imagesGalery/'.$galery->image_url )}}" alt="">
-          </div>
           @endforeach
         </div>
         <a class="back-menu" href="/rumahsakit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">

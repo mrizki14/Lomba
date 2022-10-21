@@ -47,7 +47,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12 mb-3">
                     <div class="form-group">
                         <strong>Keahlian Penyakit</strong>
-                        <input type="text" name="keahlian_penyakit" class="form-control" value="{{ $hospital->keahhlian_penyakit }}">
+                        <input type="text" name="keahlian_penyakit" class="form-control" value="{{ $hospital->keahlian_penyakit }}">
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 mb-3">
@@ -62,7 +62,7 @@
                         <input type="text" name="rincian_penanganan" class="form-control" value="{{ $hospital->rincian_penanganan }}">
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-12 mb-3">
+                {{-- <div class="col-xs-12 col-sm-12 col-md-12 mb-3">
                     <div class="form-group">
                         <strong>Fasilitas Rumah Sakit</strong>
                         <input type="text" name="fasilitas" class="form-control" value="{{ $hospital->fasilitas }}">
@@ -73,7 +73,7 @@
                         <strong>Dukungan Rumah Sakit</strong>
                         <input type="text" name="dukungan" class="form-control" value="{{ $hospital->dukungan }}">
                     </div>
-                </div>
+                </div> --}}
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center mt-3">
                         <button type="submit" class="btn btn-primary">Submit</button>
                         <a class="btn btn-primary" href="{{ route('hospitals.index') }}"> Back</a>
