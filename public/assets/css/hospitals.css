@@ -635,32 +635,35 @@ header {
   margin-top: 3em;
   box-shadow: 0 0 40px 2px #d6d6d6ce;
 }
-.button-service-hospitals-1 {
+/* .button-service-hospitals-1 {
   background: #0c4b75;
   border-radius: 25px;
   width: 82px;
   height: 43px;
   padding-top: 10px;
   color: white !important;
-}
-
+} */
+.button-service-hospitals-1:hover,
 .button-service-hospitals-2:hover,
 .button-service-hospitals-3:hover {
   color: white;
   background-color: #0c4b75;
   border-radius: 25px;
 }
-.button-service-hospitals-1:focus,
-.button-service-hospitals-2:focus,
-.button-service-hospitals-3:focus {
-  box-shadow: none;
+.button-service-hospitals-1:focus-within,
+.button-service-hospitals-2:focus-within,
+.button-service-hospitals-3:focus-within {
+  color: white;
   border-radius: 25px;
+  background-color: #0c4b75;
 }
 .button-service-hospitals-1,
 .button-service-hospitals-2,
 .button-service-hospitals-3 {
   margin: 0 1em;
 }
+
+.button-service-hospitals-1,
 .button-service-hospitals-2,
 .button-service-hospitals-3 {
   color: #0c4b75;
