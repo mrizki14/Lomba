@@ -99,15 +99,15 @@
             <h1>Our Popular Hospital Services</h1>
           </div>
           <div class="button-service-hospitals">
-            <a href="#" class="btn button-service-hospitals-1 active">TOP</a>
-            <a href="#" class="btn button-service-hospitals-2">Terdekat</a>
-            <a href="#" class="btn button-service-hospitals-3">Pilihan Terbaik</a>
+            <a class="btn button-service-hospitals-3 active" tabindex="1" id="all" autofocus>All</a>
+            <a class="btn button-service-hospitals-1" tabindex="1" id="top">TOP</a>
+            <a class="btn button-service-hospitals-2" tabindex="1" id="terdekat">Terdekat</a>
           </div>
          
           <div class="product-hospital d-block">
             <div class="row">
               @foreach ($hospitals as $d) 
-              <div class="col-lg-4 col-sm-12">
+              <div class="col-lg-4 col-sm-12 hospital">
                 <div class="hospital-1">
                   <div class="card card-hospital">
                     <img src="{{ asset('imagesHospitals/' .$d->image_path)}}" class="img-hospital-1" alt="" />
